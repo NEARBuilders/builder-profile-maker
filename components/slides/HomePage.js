@@ -42,7 +42,7 @@ export default function HomePage() {
         <AboutMe back={() => setIsVisible(false)} />
       ) : (
         <div className="scroll-smooth">
-          <div className="w-full flex flex-col md:flex-row py-16 md:py-28 min-h-[90vh] items-center relative">
+          <div className="w-full flex flex-col md:flex-row py-16 min-h-[90vh] items-center relative">
             <div className="flex flex-col w-full md:w-6/12 relative">
               <p className="text-6xl md:text-7xl 2xl:text-8xl">
                 Builder Profile Creator
@@ -63,17 +63,6 @@ export default function HomePage() {
                     <RIGHT_ARROW_SVG />
                   </button>
                 </form>
-              </div>
-              <div>
-                No NEAR Wallet Address yet?{" "}
-                <a
-                  href="https://wallet.meteorwallet.app/add_wallet/create_new"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cyan-700 underline"
-                >
-                  Get one here
-                </a>
               </div>
             </div>
             <div className="flex w-full mt-16 md:mt-0 md:w-6/12 justify-center">

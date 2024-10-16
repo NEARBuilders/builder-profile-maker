@@ -10,13 +10,6 @@ export default function Socials({ back }) {
   const profileMaker = useProfileMaker();
   function onNext() {
     socials = "";
-    if (document.getElementById("contra").value != "") {
-      socials =
-        socials +
-        `[![Contra](https://img.shields.io/badge/Contra-1769ff?logo=contra&logoColor=white)](https://contra.com/${
-          document.getElementById("contra").value
-        }) `;
-    }
     if (document.getElementById("linkedin").value != "") {
       socials =
         socials +

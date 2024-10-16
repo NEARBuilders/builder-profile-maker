@@ -82,6 +82,7 @@ export default function Preview({ back }) {
 
   function saveToNearSocial() {
     const data = profileMaker.data;
+    console.log(data);
 
     let profileData = {
       name: data.name,
@@ -112,7 +113,7 @@ export default function Preview({ back }) {
       },
     };
 
-    console.log(profileData);
+    return profileData;
   }
 
   return (
@@ -184,7 +185,9 @@ export default function Preview({ back }) {
       <p className="flex flex-col h-full items-center text-xl text-center pt-5 lg:pt-10">
         Hey👋, Can you help us to grow by sharing? <br />
       </p>
-      <pre className="text-white">{JSON.stringify(profileMaker.data)}</pre>
+      <pre className="text-white">
+        {JSON.stringify(saveToNearSocial(), null, 2)}
+      </pre>
       {copiedAlertVisible && <ToastSuccess title="Copied Successfully !" />}
       {downloadAlertVisible && <ToastSuccess title="Download Started !" />}
       {/* <FeedbackButton /> */}

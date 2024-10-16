@@ -12,7 +12,9 @@ export default function GitHubStats({ back }) {
   const profileMaker = useProfileMaker();
   const [theme, setTheme] = useState(profileMaker.data.stats.theme);
   const [border, setBorder] = useState(profileMaker.data.stats.border);
-  const [includeAll, setIncludeAll] = useState(profileMaker.data.stats.lifetime);
+  const [includeAll, setIncludeAll] = useState(
+    profileMaker.data.stats.lifetime
+  );
   const [includePrivate, setIncludePrivate] = useState(
     profileMaker.data.stats.prv
   );

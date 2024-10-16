@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
 import { useObserver } from "mobx-react";
@@ -6,12 +6,16 @@ import GitHubStats from "./GitHubCards";
 import { LightBulbIcon } from "@heroicons/react/outline";
 import { useProfileMaker } from "../../contexts/profile-maker";
 
+import { UploadButton } from "../../utils/uploadthing";
+
 export default function AboutMe({ back }) {
   const [isVisible, setIsVisible] = useState(false);
   const profileMaker = useProfileMaker();
   const [aboutme, setAboutme] = useState(profileMaker.data.aboutme);
   const [name, setName] = useState(profileMaker.data.name);
-  const [profileImage, setProfileImage] = useState(profileMaker.data.profileImage);
+  const [profileImage, setProfileImage] = useState(
+    profileMaker.data.profileImage
+  );
   const [backgroundImage, setBackgroundImage] = useState(
     profileMaker.data.backgroundImage
   );
@@ -26,13 +30,13 @@ export default function AboutMe({ back }) {
     if (
       aboutme != `` &&
       name != `` &&
-      profileImage != `` &&
-      backgroundImage != ``
+      profileImage.url != `` &&
+      backgroundImage.url != ``
     ) {
       profileMaker.data.aboutme = aboutme;
       profileMaker.data.name = name;
-      profileMaker.data.profileImage = profileImage;
-      profileMaker.data.backgroundImage = backgroundImage;
+      profileMaker.data.profileImage = profileImage.url;
+      profileMaker.data.backgroundImage = backgroundImage.url;
     }
     setIsVisible(true);
   }
@@ -64,28 +68,38 @@ export default function AboutMe({ back }) {
                 onChange={(e) => setName(e.target.value)}
                 autoFocus
               />
-              <p className="text-4xl md:text-5xl font-semibold text-[#ECA227]">
-                Profile Image URL :
-              </p>
-              <input
-                name="profileImage"
-                className="w-full bg-transparent text-base sm:text-lg md:text-xl p-4 outline-none ring-2 ring-[#ECA227] focus:ring-white rounded-md my-6 md:my-10 resize-none whitespace-pre"
-                placeholder="Your profile image url"
-                value={profileImage}
-                onChange={(e) => setProfileImage(e.target.value)}
-                autoFocus
-              />
-              <p className="text-4xl md:text-5xl font-semibold text-[#ECA227]">
-                Background Image URL :
-              </p>
-              <input
-                name="profileImage"
-                className="w-full bg-transparent text-base sm:text-lg md:text-xl p-4 outline-none ring-2 ring-[#ECA227] focus:ring-white rounded-md my-6 md:my-10 resize-none whitespace-pre"
-                placeholder="Your background image url"
-                value={backgroundImage}
-                onChange={(e) => setBackgroundImage(e.target.value)}
-                autoFocus
-              />
+              <div className="grid md:grid-cols-2 gap-4 place-items-center">
+                <div className="flex flex-col gap-2 items-center">
+                  <p className="text-2xl font-semibold text-[#ECA227]">
+                    Profile Image URL:
+                  </p>
+                  <span className="text-base text-white font-normal">
+                    {profileImage.name}
+                  </span>
+                </div>
+                <UploadButton
+                  endpoint="imageUploader"
+                  onClientUploadComplete={(res) => {
+                    console.log("File: ", res);
+                    setProfileImage(res[0]);
+                  }}
+                />
+                <div className="flex flex-col gap-2 items-center">
+                  <p className="text-2xl font-semibold text-[#ECA227]">
+                    Background Image URL : <span></span>
+                  </p>
+                  <span className="text-base text-white font-normal">
+                    {backgroundImage.name}
+                  </span>
+                </div>
+                <UploadButton
+                  endpoint="imageUploader"
+                  onClientUploadComplete={(res) => {
+                    console.log("Files: ", res);
+                    setBackgroundImage(res[0]);
+                  }}
+                />
+              </div>
               <p className="text-4xl md:text-5xl font-semibold text-[#ECA227]">
                 About Me :
               </p>

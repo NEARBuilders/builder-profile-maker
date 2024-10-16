@@ -16,6 +16,7 @@
     "@near-wallet-selector/meteor-wallet": "^8.9.13",
     "@near-wallet-selector/modal-ui": "^8.9.13",
     "@near-wallet-selector/my-near-wallet": "^8.9.13",
+    "@uploadthing/react": "^7.0.3",
     "axios": "^0.27.2",
     "crisp-sdk-web": "^1.0.22",
     "firebase": "^9.6.4",
@@ -26,9 +27,11 @@
     "next": "^14.2.15",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "uploadthing": "^7.1.0"
   },
   "devDependencies": {
+    "@types/react": "18.3.11",
     "autoprefixer": "^10.4.2",
     "eslint": "8.7.0",
     "eslint-config-next": "14.2.15",

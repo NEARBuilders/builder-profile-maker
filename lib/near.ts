@@ -1,19 +1,19 @@
 // near api js
-import { providers } from 'near-api-js';
+import { providers } from "near-api-js";
 
 // wallet selector
-import { distinctUntilChanged, map } from 'rxjs';
-import '@near-wallet-selector/modal-ui/styles.css';
-import { setupWalletSelector } from '@near-wallet-selector/core';
-import { setupHereWallet } from '@near-wallet-selector/here-wallet';
-import { setupMeteorWallet } from '@near-wallet-selector/meteor-wallet';
-import { setupMyNearWallet } from '@near-wallet-selector/my-near-wallet';
-import { setupModal } from '@near-wallet-selector/modal-ui';
+import { distinctUntilChanged, map } from "rxjs";
+import "@near-wallet-selector/modal-ui/styles.css";
+import { setupWalletSelector } from "@near-wallet-selector/core";
+import { setupHereWallet } from "@near-wallet-selector/here-wallet";
+import { setupMeteorWallet } from "@near-wallet-selector/meteor-wallet";
+import { setupMyNearWallet } from "@near-wallet-selector/my-near-wallet";
+import { setupModal } from "@near-wallet-selector/modal-ui";
 
-const THIRTY_TGAS = '30000000000000';
-const NO_DEPOSIT = '0';
+const THIRTY_TGAS = "30000000000000";
+const NO_DEPOSIT = "0";
 
-export const NETWORK_ID = 'mainnet';
+export const NETWORK_ID = "mainnet";
 export class Wallet {
   /**
    * @constructor
@@ -25,7 +25,7 @@ export class Wallet {
    */
   constructor({
     networkId = NETWORK_ID /*??*/,
-    createAccessKeyFor = undefined
+    createAccessKeyFor = undefined,
   }) {
     // @ts-expect-error - "property does not exist", ya whatever
     this.createAccessKeyFor = createAccessKeyFor;
@@ -43,13 +43,7 @@ export class Wallet {
     this.selector = setupWalletSelector({
       // @ts-expect-error - "property does not exist", ya whatever
       network: this.networkId,
-      modules: [
-        // @ts-expect-error - not assignable to type...?
-        setupMyNearWallet(),
-        setupHereWallet(),
-        // @ts-expect-error - not assignable to type...?
-        setupMeteorWallet()
-      ]
+      modules: [setupMyNearWallet(), setupHereWallet(), setupMeteorWallet()],
     });
 
     // @ts-expect-error - "property does not exist", ya whatever
@@ -57,9 +51,9 @@ export class Wallet {
     const isSignedIn = walletSelector.isSignedIn();
     const accountId = isSignedIn
       ? walletSelector.store.getState().accounts[0].accountId
-      : '';
+      : "";
 
-    const okx_account_id = localStorage.getItem('okx_account_id');
+    const okx_account_id = localStorage.getItem("okx_account_id");
     if (okx_account_id) {
       accountChangeHook(okx_account_id);
     } else {
@@ -87,7 +81,7 @@ export class Wallet {
     // @ts-expect-error - "property does not exist", ya whatever
     const modal = setupModal(await this.selector, {
       // @ts-expect-error - "property does not exist", ya whatever
-      contractId: this.createAccessKeyFor
+      contractId: this.createAccessKeyFor,
     });
     modal.show();
   };
@@ -116,11 +110,11 @@ export class Wallet {
     const provider = new providers.JsonRpcProvider({ url: network.nodeUrl });
 
     const res = await provider.query({
-      request_type: 'call_function',
+      request_type: "call_function",
       account_id: contractId,
       method_name: method,
-      args_base64: Buffer.from(JSON.stringify(args)).toString('base64'),
-      finality: 'optimistic'
+      args_base64: Buffer.from(JSON.stringify(args)).toString("base64"),
+      finality: "optimistic",
     });
     // @ts-expect-error - "property does not exist", ya whatever
     return JSON.parse(Buffer.from(res.result).toString());
@@ -140,7 +134,7 @@ export class Wallet {
     method,
     args = {},
     gas = THIRTY_TGAS,
-    deposit = NO_DEPOSIT
+    deposit = NO_DEPOSIT,
   }) => {
     // Sign a transaction with the "FunctionCall" action
     // @ts-expect-error - "property does not exist", ya whatever
@@ -149,12 +143,12 @@ export class Wallet {
     const selectedWallet = await select.wallet();
 
     if (!selectedWallet) {
-      console.error('No wallet selected or wallet initialization failed');
+      console.error("No wallet selected or wallet initialization failed");
       return;
     }
 
     let outcome;
-    if (selectedWallet.id === 'okx-wallet') {
+    if (selectedWallet.id === "okx-wallet") {
       try {
         // @ts-expect-error - "property does not exist", ya whatever
         const response = await window.okxwallet.near.signAndSendTransaction({
@@ -164,14 +158,14 @@ export class Wallet {
               methodName: method,
               args,
               gas,
-              deposit
-            }
-          ]
+              deposit,
+            },
+          ],
         });
         const sig = await this.getTransactionResult(response.txHash);
         return sig;
       } catch (e) {
-        console.log('e', e);
+        console.log("e", e);
       }
     } else {
       try {
@@ -179,18 +173,18 @@ export class Wallet {
           receiverId: contractId,
           actions: [
             {
-              type: 'FunctionCall',
+              type: "FunctionCall",
               params: {
                 methodName: method,
                 args,
                 gas,
-                deposit
-              }
-            }
-          ]
+                deposit,
+              },
+            },
+          ],
         });
       } catch (e) {
-        console.log('e', e);
+        console.log("e", e);
       }
     }
 
@@ -209,7 +203,7 @@ export class Wallet {
     const provider = new providers.JsonRpcProvider({ url: network.nodeUrl });
 
     // Retrieve transaction result from the network
-    const transaction = await provider.txStatus(txhash, 'unnused');
+    const transaction = await provider.txStatus(txhash, "unnused");
     return providers.getTransactionLastResult(transaction);
   };
 }

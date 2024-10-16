@@ -8,14 +8,14 @@ export default function TextInputWithImage({ id, imgUrl, placeholder }) {
     profileMaker.data.donate[id] = input;
   }, [input]);
   return (
-    <div className="flex w-full md:w-10/12 my-2">
+    <div className="my-2 flex w-full md:w-10/12">
       <input
         type="text"
         id={id}
         placeholder={placeholder}
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        className="w-full h-16 p-4 border-b-2 bg-transparent outline-none border-green-300 focus:border-green-200 focus:z-10"
+        className="h-16 w-full border-b-2 border-green-300 bg-transparent p-4 outline-none focus:z-10 focus:border-green-200"
       />
 
       <label htmlFor={id} className="p-5">
@@ -23,7 +23,7 @@ export default function TextInputWithImage({ id, imgUrl, placeholder }) {
         <img
           src={imgUrl}
           alt=""
-          className="w-12 aspect-square bg-green-100 rounded-md p-1"
+          className="aspect-square w-12 rounded-md bg-green-100 p-1"
         />
       </label>
     </div>

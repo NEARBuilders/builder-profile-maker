@@ -128,13 +128,13 @@ export function CrispBanner() {
       "linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5)",
     backgroundSize: "600%",
     WebkitAnimation: "anime 16s linear infinite",
-    animation: "anime 16s linear infinite",
+    animation: "anime 16s linear infinite"
   };
 
   const bannerWrapperAnimation = {
     animation: "appear 5s ease-in-out",
     overflow: "hidden",
-    width: "100%",
+    width: "100%"
   };
 
   const buttonStyles = {
@@ -148,7 +148,7 @@ export function CrispBanner() {
     height: "40px",
     justifyContent: "center",
     alignItems: "center",
-    width: "100%",
+    width: "100%"
   };
 
   return (

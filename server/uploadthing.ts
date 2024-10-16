@@ -18,7 +18,7 @@ export const ourFileRouter = {
       // !!! Whatever is returned here is sent to the clientside `onClientUploadComplete` callback
       return { status: "ok" };
     }
-  ),
+  )
 } satisfies FileRouter;
 
 export type OurFileRouter = typeof ourFileRouter;

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useProfileMaker } from "../../../contexts/profile-maker";
 
-export default function BadgeSelect({ label, url}) {
-  const profileMaker = useProfileMaker()
-  const [isAdded, setIsAdded] = useState(profileMaker.data.tech.toString().includes(url));
+export default function BadgeSelect({ label, url }) {
+  const profileMaker = useProfileMaker();
+  const [isAdded, setIsAdded] = useState(
+    profileMaker.data.tech.toString().includes(url)
+  );
   function onClickFun() {
     if (isAdded) {
       setIsAdded(false);
@@ -21,11 +23,11 @@ export default function BadgeSelect({ label, url}) {
     <>
       {isAdded ? (
         <div
-          className="bg-green-400 rounded-md flex items-center cursor-pointer hover:ring-1 ring-green-400/40 active:scale-[0.98] transition-scale ease-in-out duration-200 select-none m-2 shadow-md text-zinc-900"
+          className="transition-scale m-2 flex cursor-pointer select-none items-center rounded-md bg-green-400 text-zinc-900 shadow-md ring-green-400/40 duration-200 ease-in-out hover:ring-1 active:scale-[0.98]"
           onClick={onClickFun}
         >
-          <p className=" p-1 px-2">{label}</p>
-          <div className="w-[1px] bg-gray-600 h-full opacity-20"></div>
+          <p className="p-1 px-2">{label}</p>
+          <div className="h-full w-[1px] bg-gray-600 opacity-20"></div>
           <p className="px-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -45,11 +47,11 @@ export default function BadgeSelect({ label, url}) {
         </div>
       ) : (
         <div
-          className="bg-green-100 rounded-md flex items-center cursor-pointer hover:ring-1 ring-green-100/40 active:scale-[0.98im] transition-scale ease-in-out duration-200 select-none m-2 shadow-md"
+          className="transition-scale m-2 flex cursor-pointer select-none items-center rounded-md bg-green-100 shadow-md ring-green-100/40 duration-200 ease-in-out hover:ring-1 active:scale-[0.98im]"
           onClick={onClickFun}
         >
-          <p className=" p-1 px-2">{label}</p>
-          <div className="w-[1px] bg-gray-600 h-full opacity-20"></div>
+          <p className="p-1 px-2">{label}</p>
+          <div className="h-full w-[1px] bg-gray-600 opacity-20"></div>
           <p className="px-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"

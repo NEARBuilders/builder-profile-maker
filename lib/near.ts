@@ -25,7 +25,7 @@ export class Wallet {
    */
   constructor({
     networkId = NETWORK_ID /*??*/,
-    createAccessKeyFor = undefined,
+    createAccessKeyFor = undefined
   }) {
     // @ts-expect-error - "property does not exist", ya whatever
     this.createAccessKeyFor = createAccessKeyFor;
@@ -43,7 +43,7 @@ export class Wallet {
     this.selector = setupWalletSelector({
       // @ts-expect-error - "property does not exist", ya whatever
       network: this.networkId,
-      modules: [setupMyNearWallet(), setupHereWallet(), setupMeteorWallet()],
+      modules: [setupMyNearWallet(), setupHereWallet(), setupMeteorWallet()]
     });
 
     // @ts-expect-error - "property does not exist", ya whatever
@@ -81,7 +81,7 @@ export class Wallet {
     // @ts-expect-error - "property does not exist", ya whatever
     const modal = setupModal(await this.selector, {
       // @ts-expect-error - "property does not exist", ya whatever
-      contractId: this.createAccessKeyFor,
+      contractId: this.createAccessKeyFor
     });
     modal.show();
   };
@@ -114,7 +114,7 @@ export class Wallet {
       account_id: contractId,
       method_name: method,
       args_base64: Buffer.from(JSON.stringify(args)).toString("base64"),
-      finality: "optimistic",
+      finality: "optimistic"
     });
     // @ts-expect-error - "property does not exist", ya whatever
     return JSON.parse(Buffer.from(res.result).toString());
@@ -134,7 +134,7 @@ export class Wallet {
     method,
     args = {},
     gas = THIRTY_TGAS,
-    deposit = NO_DEPOSIT,
+    deposit = NO_DEPOSIT
   }) => {
     // Sign a transaction with the "FunctionCall" action
     // @ts-expect-error - "property does not exist", ya whatever
@@ -158,9 +158,9 @@ export class Wallet {
               methodName: method,
               args,
               gas,
-              deposit,
-            },
-          ],
+              deposit
+            }
+          ]
         });
         const sig = await this.getTransactionResult(response.txHash);
         return sig;
@@ -178,10 +178,10 @@ export class Wallet {
                 methodName: method,
                 args,
                 gas,
-                deposit,
-              },
-            },
-          ],
+                deposit
+              }
+            }
+          ]
         });
       } catch (e) {
         console.log("e", e);

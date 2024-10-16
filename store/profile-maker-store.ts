@@ -1,4 +1,4 @@
-import { makeAutoObservable } from 'mobx';
+import { makeAutoObservable } from "mobx";
 
 class ProfileMakerStore {
   data = {
@@ -12,7 +12,7 @@ class ProfileMakerStore {
       theme: "dark",
       border: true,
       lifetime: false,
-      prv: false,
+      prv: false
     },
     socials: {
       behance: "",
@@ -28,7 +28,7 @@ class ProfileMakerStore {
       tiktok: "",
       twitch: "",
       x: "",
-      youtube: "",
+      youtube: ""
     },
     tech: [] as string[],
     badge_theme: "for-the-badge",
@@ -36,32 +36,32 @@ class ProfileMakerStore {
       buymeacoffee: "",
       paypal: "",
       patreon: "",
-      kofi: "",
+      kofi: ""
     },
     trophy: {
       theme: "radical",
       border: true,
-      background: false,
+      background: false
     },
     visitcount: {
       color: 0,
-      icon: 0,
+      icon: 0
     },
     quote: {
       quoteTheme: "radical",
-      layout: "horizontal",
+      layout: "horizontal"
     },
     toprepo: {
-      toprepotheme: "dark",
+      toprepotheme: "dark"
     },
     checkbox: {
       trophychk: false,
       visitorschk: true,
       quotechk: false,
       memechk: false,
-      gtcechk: true,
+      gtcechk: true
     },
-    finalData: "",
+    finalData: ""
   };
 
   constructor() {

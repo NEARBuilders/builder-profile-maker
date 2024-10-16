@@ -3,25 +3,22 @@ import AnchorWithSVG from "../elements/anchor/AnchorWithSVG";
 
 export default function SocialLinks() {
   return (
-    <div className="flex flex-col-reverse md:flex-row my-8 text-green-300">
-      <div className="w-full md:w-6/12 flex flex-col justify-center md:items-end my-6 md:my-0">
-        <p className="text-3xl sm:text-4xl md:text-5xl font-medium">
+    <div className="my-8 flex flex-col-reverse text-green-300 md:flex-row">
+      <div className="my-6 flex w-full flex-col justify-center md:my-0 md:w-6/12 md:items-end">
+        <p className="text-3xl font-medium sm:text-4xl md:text-5xl">
           Our Social Links
         </p>
-        <p className="text-gray-500 md:pl-10 my-6 md:text-lg 2xl:text-xl md:text-right">
-          We are available on X, LinkedIn, and GitHub. You can connect
-          with us to get notification about any new feature we add, any cool
-          product we create or get early access of some cool projects !
+        <p className="my-6 text-gray-500 md:pl-10 md:text-right md:text-lg 2xl:text-xl">
+          We are available on X, LinkedIn, and GitHub. You can connect with us
+          to get notification about any new feature we add, any cool product we
+          create or get early access of some cool projects !
         </p>
         <div className="flex flex-row flex-wrap justify-center md:items-end">
           <AnchorWithSVG
             url="https://linkedin.com/in/VishwaGauravIn"
             title="LinkedIn"
           />
-          <AnchorWithSVG
-            url="https://x.com/VishwaGauravIn"
-            title="X"
-          />
+          <AnchorWithSVG url="https://x.com/VishwaGauravIn" title="X" />
           <AnchorWithSVG
             url="https://github.com/VishwaGauravIn"
             title="GitHub"
@@ -32,11 +29,11 @@ export default function SocialLinks() {
           />
         </div>
       </div>
-      <div className="w-full md:w-6/12 flex flex-col justify-center items-center">
+      <div className="flex w-full flex-col items-center justify-center md:w-6/12">
         <img
           src="/socials.svg"
           alt=""
-          className="w-10/12 aspect-square select-none pointer-events-none -rotate-3"
+          className="pointer-events-none aspect-square w-10/12 -rotate-3 select-none"
           draggable="false"
         />
       </div>

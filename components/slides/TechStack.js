@@ -29,7 +29,7 @@ export default function TechStack({ back }) {
   // It is just a message that will appear under a category if no matching tech is found
   const nothingFound = () => {
     return (
-      <p className="text-red-300 opacity-60 my-10">
+      <p className="my-10 text-red-300 opacity-60">
         Oops! no result found for your search.
       </p>
     );
@@ -80,14 +80,14 @@ ${profileMaker.data.tech
         <Preview back={() => setIsVisible(false)} />
       ) : (
         // <Donate back={() => setIsVisible(false)} />
-        <div className="flex flex-col items-center fade-on-appear">
+        <div className="fade-on-appear flex flex-col items-center">
           <button
-            className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none"
+            className="absolute left-0 m-10 opacity-80 outline-none transition-all ease-in-out hover:opacity-100"
             onClick={back}
           >
             ◄ Go Back
           </button>
-          <p className="w-full text-center text-2xl sm:text-3xl my-8 sm:my-10 mt-20">
+          <p className="my-8 mt-20 w-full text-center text-2xl sm:my-10 sm:text-3xl">
             Add Tech that you use
           </p>
           {/* Search Box */}
@@ -97,32 +97,32 @@ ${profileMaker.data.tech
               name=""
               id=""
               value={searchStr}
-              className="bg-transparent outline-none ring-2 p-4 px-8 ring-green-200 rounded-full text-green-300 pr-16 max-w-[92vw] sm:max-w-full"
+              className="max-w-[92vw] rounded-full bg-transparent p-4 px-8 pr-16 text-green-300 outline-none ring-2 ring-green-200 sm:max-w-full"
               placeholder="Search tech"
               onChange={(e) => setSearchStr(e.target.value)}
             />
-            <SearchIcon className="w-8 absolute right-4 top-1/2 -translate-y-1/2" />
+            <SearchIcon className="absolute right-4 top-1/2 w-8 -translate-y-1/2" />
           </div>
-          <div className="flex flex-col md:flex-row w-full">
+          <div className="flex w-full flex-col md:flex-row">
             <div
               className={`w-full ${
                 searchStr ? "hidden" : "flex"
-              } md:w-6/12 justify-center items-center`}
+              } items-center justify-center md:w-6/12`}
             >
               <img
                 src="/girlonpc.svg"
                 alt=""
-                className="md:w-8/12 aspect-square select-none pointer-events-none"
+                className="pointer-events-none aspect-square select-none md:w-8/12"
                 draggable="false"
               />
             </div>
             <div
-              className={`flex flex-col w-full ${
+              className={`flex w-full flex-col ${
                 searchStr ? "md:w-full" : "md:w-6/12"
               }`}
             >
               {/* NOT USING ANY DATA FILE TO POPULATE BADGES */}
-              <div className="flex flex-col h-full items-center">
+              <div className="flex h-full flex-col items-center">
                 {/* If nothing found in all searches - can be minified */}
                 {techData.lang.length === 0 &&
                   techData.database.length === 0 &&
@@ -140,7 +140,7 @@ ${profileMaker.data.tech
               </div>
             </div>
           </div>
-          <div className="w-full flex flex-col justify-center items-center text-green-100">
+          <div className="flex w-full flex-col items-center justify-center text-green-100">
             {/* Hosting/SaaS */}
             {/* <TechBadgesWrapper label="Hosting/SaaS" data={techData.hosting} /> */}
             {/* FRAMEWORKS, PLATFORMS & LIBRARIES */}
@@ -165,7 +165,7 @@ ${profileMaker.data.tech
             <TechBadgesWrapper label="OTHER" data={techData.others} />
           </div>
           {/* Select Badge Type (with preview) */}
-          <div className="flex flex-row flex-wrap justify-center items-center border p-2 px-4 border-green-300/50 rounded-md mb-6">
+          <div className="mb-6 flex flex-row flex-wrap items-center justify-center rounded-md border border-green-300/50 p-2 px-4">
             Theme:
             <select
               id="badgestyle"
@@ -177,7 +177,7 @@ ${profileMaker.data.tech
               onChange={() =>
                 setBadgeStyle(document.getElementById("badgestyle").value)
               }
-              className="bg-transparent py-1 px-2 outline-none w-max"
+              className="w-max bg-transparent px-2 py-1 outline-none"
             >
               <option value="for-the-badge" className="bg-zinc-900">
                 For the badge
@@ -199,7 +199,7 @@ ${profileMaker.data.tech
             <img
               src={`https://img.shields.io/badge/Preview-1ED760?style=${BadgeStyle}&logo=spotify&logoColor=white`}
               alt=""
-              className="w-max max-w-xs ml-4"
+              className="ml-4 w-max max-w-xs"
             />
           </div>
           <NextButton onClick={() => onNext()} />

@@ -94,27 +94,27 @@ ${profileMaker.data.tech
       {isVisible ? (
         <Preview back={() => setIsVisible(false)} />
       ) : (
-        <div className="flex flex-col items-center fade-on-appear">
+        <div className="fade-on-appear flex flex-col items-center">
           <button
-            className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none"
+            className="absolute left-0 m-10 opacity-80 outline-none transition-all ease-in-out hover:opacity-100"
             onClick={back}
           >
             ◄ Go Back
           </button>
-          <p className="w-full text-center text-3xl my-10 mt-20">
+          <p className="my-10 mt-20 w-full text-center text-3xl">
             Let People Help You via Donations
           </p>
-          <div className="flex flex-col md:flex-row w-full">
-            <div className="flex w-full md:w-6/12 justify-center items-center">
+          <div className="flex w-full flex-col md:flex-row">
+            <div className="flex w-full items-center justify-center md:w-6/12">
               <img
                 src="/donate.svg"
                 alt=""
-                className="w-8/12 aspect-square select-none pointer-events-none -rotate-3"
+                className="pointer-events-none aspect-square w-8/12 -rotate-3 select-none"
                 draggable="false"
               />
             </div>
-            <div className="flex flex-col w-full md:w-6/12">
-              <p className="text-4xl md:text-5xl font-semibold text-green-300">
+            <div className="flex w-full flex-col md:w-6/12">
+              <p className="text-4xl font-semibold text-green-300 md:text-5xl">
                 Donate :
               </p>
               <TextInputWithImage
@@ -137,7 +137,7 @@ ${profileMaker.data.tech
                 placeholder="Ko-Fi Username"
                 imgUrl="/kofi.svg"
               />
-              <div className="flex w-full md:w-10/12 justify-center md:justify-end mt-4">
+              <div className="mt-4 flex w-full justify-center md:w-10/12 md:justify-end">
                 <NextButton onClick={() => onNext()} />
                 <Pagination val={5} />
                 {/* <FeedbackButton /> */}

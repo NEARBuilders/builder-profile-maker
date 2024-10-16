@@ -4,7 +4,7 @@ export default function FeedbackButton() {
   return (
     <a
       href="mailto:itsvgin@gmail.com"
-      className="fixed hidden md:flex -left-10 p-1 pb-2 px-3 bottom-28 rotate-90 bg-zinc-900 border border-b-0 rounded-md opacity-50 hover:opacity-100 shadow-xl hover:shadow-green-200 transition-all ease-in-out"
+      className="fixed -left-10 bottom-28 hidden rotate-90 rounded-md border border-b-0 bg-zinc-900 p-1 px-3 pb-2 opacity-50 shadow-xl transition-all ease-in-out hover:opacity-100 hover:shadow-green-200 md:flex"
     >
       Feedback
     </a>

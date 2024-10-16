@@ -29,7 +29,7 @@
 ### Installing dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Running the app
@@ -37,13 +37,13 @@ npm install
 First, run the development server:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 ### Building for production
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 ## Contributing

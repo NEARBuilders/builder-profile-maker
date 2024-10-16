@@ -4,7 +4,7 @@ export default function AnchorWithSVG({ url, title, d }) {
   return (
     <a
       href={url}
-      className="flex justify-center items-center p-3 px-6 w-max bg-green-300 text-green-900 font-semibold rounded-full shadow-lg hover:shadow-green-300/30 hover:scale-[1.02] transition-all ease-in-out duration-100 sm:scale-100 m-1.5"
+      className="m-1.5 flex w-max items-center justify-center rounded-full bg-green-300 p-3 px-6 font-semibold text-green-900 shadow-lg transition-all duration-100 ease-in-out hover:scale-[1.02] hover:shadow-green-300/30 sm:scale-100"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -12,7 +12,7 @@ export default function AnchorWithSVG({ url, title, d }) {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
-        className="w-4 h-4 mr-2"
+        className="mr-2 h-4 w-4"
         viewBox="0 0 16 16"
       >
         <path d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />

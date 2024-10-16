@@ -18,13 +18,13 @@ export default function Preview({ back }) {
     quotes: "“”‘’",
     highlight: function (/*str, lang*/) {
       return "";
-    },
+    }
   });
 
   useEffect(() => {
     db.collection(profileMaker.data.username).add({
       date: Date(),
-      data: profileMaker.data.finalData,
+      data: profileMaker.data.finalData
     });
     setTimeout(() => {
       document.getElementById("content").innerHTML = md.render(
@@ -51,7 +51,7 @@ export default function Preview({ back }) {
   function onDownload() {
     const element = document.createElement("a");
     const file = new Blob([profileMaker.data.finalData], {
-      type: "text/plain",
+      type: "text/plain"
     });
     element.href = URL.createObjectURL(file);
     element.download = "ReadMe.md";
@@ -88,10 +88,10 @@ export default function Preview({ back }) {
       name: data.name,
       description: data.aboutme,
       image: {
-        url: data.profileImage,
+        url: data.profileImage
       },
       backgroundImage: {
-        url: data.backgroundImage,
+        url: data.backgroundImage
       },
       linktree: {
         behance: data.socials.behance,
@@ -109,25 +109,25 @@ export default function Preview({ back }) {
         tiktok: data.socials.tiktok,
         twitch: data.socials.twitch,
         twitter: data.socials.x,
-        youtube: data.socials.youtube,
-      },
+        youtube: data.socials.youtube
+      }
     };
 
     return profileData;
   }
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="flex w-full flex-col items-center">
       <button
-        className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none"
+        className="absolute left-0 m-10 opacity-80 outline-none transition-all ease-in-out hover:opacity-100"
         onClick={back}
       >
         ◄ Go Back
       </button>
-      <p className="w-full text-center text-3xl my-8 mt-20">
+      <p className="my-8 mt-20 w-full text-center text-3xl">
         Your Awesome Profile is ready !
       </p>
-      <div className="flex flex-col md:flex-row mb-10">
+      <div className="mb-10 flex flex-col md:flex-row">
         <ButtonWithSVG
           title="Copy Code"
           onClick={() => onCopy()}
@@ -168,21 +168,21 @@ export default function Preview({ back }) {
         )}
       </div>
       <div className="flex">
-        <p className="bg-green-200 text-zinc-800 p-1 px-4 rounded-t-md brightness-75">
+        <p className="rounded-t-md bg-green-200 p-1 px-4 text-zinc-800 brightness-75">
           PREVIEW
         </p>
       </div>
       <div
         id="content"
-        className="w-full md:w-8/12 p-3 py-6 bg-zinc-800 rounded-lg ring-1 ring-green-200 shadow-xl shadow-green-200/20 text-zinc-100"
+        className="w-full rounded-lg bg-zinc-800 p-3 py-6 text-zinc-100 shadow-xl shadow-green-200/20 ring-1 ring-green-200 md:w-8/12"
       ></div>
-      <p className="font-semibold text-gray-400 pt-12 flex flex-wrap">
+      <p className="flex flex-wrap pt-12 font-semibold text-gray-400">
         What to Do Next ? :&nbsp;
         <p className="font-medium">
           Copy this Code and Paste it into your GitHub ReadMe file.
         </p>{" "}
       </p>
-      <p className="flex flex-col h-full items-center text-xl text-center pt-5 lg:pt-10">
+      <p className="flex h-full flex-col items-center pt-5 text-center text-xl lg:pt-10">
         Hey👋, Can you help us to grow by sharing? <br />
       </p>
       <pre className="text-white">

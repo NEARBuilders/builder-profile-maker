@@ -16,13 +16,13 @@ export const WalletProvider = ({ children }) => {
     if (!walletStore.wallet) {
       const wallet = new Wallet({
         createAccessKeyFor: getNearContract(networkId),
-        networkId: networkId,
+        networkId: networkId
       });
       wallet.startUp((signedAccountId: string) => {
-        console.log("starting up wallet")
+        console.log("starting up wallet");
         setSignedAccountId(signedAccountId);
       });
-      console.log("setting wallet...", JSON.stringify(wallet))
+      console.log("setting wallet...", JSON.stringify(wallet));
       setWallet(wallet);
     }
   }, [networkId]);

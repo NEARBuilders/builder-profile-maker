@@ -21,7 +21,7 @@ export default function Broadcast() {
     <>
       {isVisible && (
         <div className="h-8">
-          <div className="flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 absolute w-full h-8 top-0 left-0 text-white text-xs sm:text-sm md:text-base ease-in-out transition-all">
+          <div className="absolute left-0 top-0 flex h-8 w-full items-center justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xs text-white transition-all ease-in-out sm:text-sm md:text-base">
             <a href={link} target="_blank" rel="noopener noreferrer">
               {title}
             </a>

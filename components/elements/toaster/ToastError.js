@@ -2,10 +2,10 @@ import React from "react";
 
 export default function ToastError({ title }) {
   return (
-    <div className="fixed flex top-3 left-1/2 -translate-x-1/2 p-2 px-6 bg-rose-200 text-rose-900 rounded-md flex-col md:flex-row w-max text-lg justify-center items-center max-w-[90vw] toast-error">
+    <div className="toast-error fixed left-1/2 top-3 flex w-max max-w-[90vw] -translate-x-1/2 flex-col items-center justify-center rounded-md bg-rose-200 p-2 px-6 text-lg text-rose-900 md:flex-row">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 mr-2"
+        className="mr-2 h-6 w-6"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"

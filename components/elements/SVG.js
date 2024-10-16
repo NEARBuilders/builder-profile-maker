@@ -4,7 +4,7 @@ export const BUY_ME_A_COFFEE_SVG = () => {
       viewBox="0 0 884 1279"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-5 mr-1"
+      className="mr-1 w-5"
     >
       <path
         d="M791.109 297.518L790.231 297.002L788.201 296.383C789.018 297.072 790.04 297.472 791.109 297.518V297.518Z"
@@ -70,7 +70,7 @@ export const RIGHT_ARROW_SVG = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-8 w-12 cursor-pointer transition-all mt-4 sm:mt-0 hover:ml-1 duration-200 ease-linear"
+      className="mt-4 h-8 w-12 cursor-pointer transition-all duration-200 ease-linear hover:ml-1 sm:mt-0"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -106,7 +106,7 @@ export const X_SVG = ({ size }) => {
       className={`w-${size} h-${size}`}
       viewBox="0 0 16 16"
     >
-      <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+      <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
     </svg>
   );
 };

@@ -2,9 +2,9 @@ import React from "react";
 
 export default function FAQ() {
   return (
-    <div className="bg-lightblue py-20 px-4 text-zinc-500">
-      <div className="mx-auto max-w-6xl flex flex-col md:flex-row">
-        <h2 className="mr-8 w-full md:w-1/3 text-3xl font-bold leading-9 text-zinc-400 mb-10 md:mb-0">
+    <div className="bg-lightblue px-4 py-20 text-zinc-500">
+      <div className="mx-auto flex max-w-6xl flex-col md:flex-row">
+        <h2 className="mb-10 mr-8 w-full text-3xl font-bold leading-9 text-zinc-400 md:mb-0 md:w-1/3">
           Frequently-asked questions
         </h2>
         <dl className="w-full md:w-2/3">

@@ -4,11 +4,11 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col w-full justify-center items-center pt-6 pb-2">
+    <div className="flex w-full flex-col items-center justify-center pb-2 pt-6">
       <div className="flex flex-row flex-wrap space-x-2">
         {/* X */}
         <a
-          className="bg-blue-500 text-blue-50 mt-3 hover:bg-blue-600 font-semibold uppercase  text-lg p-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none  mb-1 ease-linear transition-all duration-150 flex items-center w-max aspect-square"
+          className="mb-1 mt-3 flex aspect-square w-max items-center rounded-full bg-blue-500 p-2 text-lg font-semibold uppercase text-blue-50 shadow outline-none transition-all duration-150 ease-linear hover:bg-blue-600 hover:shadow-md focus:outline-none"
           href="https://x.com/NearBuilders"
           target="_blank"
           rel="noopener noreferrer"
@@ -17,7 +17,7 @@ export default function Footer() {
         </a>
         {/* GitHub */}
         <a
-          className="bg-violet-500 text-violet-50 mt-3 hover:bg-violet-600 font-semibold uppercase  text-lg p-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 flex items-center w-max aspect-square"
+          className="mb-1 mr-1 mt-3 flex aspect-square w-max items-center rounded-full bg-violet-500 p-2 text-lg font-semibold uppercase text-violet-50 shadow outline-none transition-all duration-150 ease-linear hover:bg-violet-600 hover:shadow-md focus:outline-none"
           href="https://github.com/NEARBuilders"
           target="_blank"
           rel="noopener noreferrer"
@@ -26,7 +26,7 @@ export default function Footer() {
         </a>
         {/* LinkedIn */}
         <a
-          className="bg-blue-600 text-blue-50 mt-3 hover:bg-blue-700 font-semibold uppercase  text-lg p-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 flex items-center w-max aspect-square"
+          className="mb-1 mr-1 mt-3 flex aspect-square w-max items-center rounded-full bg-blue-600 p-2 text-lg font-semibold uppercase text-blue-50 shadow outline-none transition-all duration-150 ease-linear hover:bg-blue-700 hover:shadow-md focus:outline-none"
           href="https://www.linkedin.com/company/nearbuilders"
           target="_blank"
           rel="noopener noreferrer"
@@ -35,10 +35,10 @@ export default function Footer() {
         </a>
       </div>
       {/* mail to */}
-      <div className="flex justify-center w-full">
+      <div className="flex w-full justify-center">
         <a
           href="mailto:contact@nearbuilders.com"
-          className="text-white flex gap-1 text-base opacity-75 mt-2 transition-all ease-in-out hover:opacity-100"
+          className="mt-2 flex gap-1 text-base text-white opacity-75 transition-all ease-in-out hover:opacity-100"
           title="Contact us for any business, service or query."
         >
           <svg
@@ -47,7 +47,7 @@ export default function Footer() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6"
+            className="h-6 w-6"
           >
             <path
               strokeLinecap="round"
@@ -58,8 +58,8 @@ export default function Footer() {
           contact@nearbuilders.com
         </a>
       </div>
-      <div className="w-full flex justify-center items-center text-green-200">
-        <p className="opacity-75 hover:opacity-95 mt-2 text-center">
+      <div className="flex w-full items-center justify-center text-green-200">
+        <p className="mt-2 text-center opacity-75 hover:opacity-95">
           Made with 💛 by{" "}
           <Link
             href="https://nearbuilders.org"

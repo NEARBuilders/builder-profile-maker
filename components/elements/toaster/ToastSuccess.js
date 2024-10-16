@@ -2,10 +2,10 @@ import React from "react";
 
 export default function ToastSuccess({ title }) {
   return (
-    <div className="fixed top-3 left-1/2 -translate-x-1/2 p-2 px-6 bg-green-200 text-green-900 rounded-md flex flex-col md:flex-row w-max text-lg justify-center items-center max-w-[90vw] toast-success">
+    <div className="toast-success fixed left-1/2 top-3 flex w-max max-w-[90vw] -translate-x-1/2 flex-col items-center justify-center rounded-md bg-green-200 p-2 px-6 text-lg text-green-900 md:flex-row">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 mr-2"
+        className="mr-2 h-6 w-6"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"

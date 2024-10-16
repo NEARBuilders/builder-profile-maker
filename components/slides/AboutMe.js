@@ -45,35 +45,35 @@ export default function AboutMe({ back }) {
       {isVisible ? (
         <GitHubStats back={() => setIsVisible(false)} />
       ) : (
-        <div className="flex flex-col items-center fade-on-appear">
+        <div className="fade-on-appear flex flex-col items-center">
           <button
-            className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none"
+            className="absolute left-0 m-10 opacity-80 outline-none transition-all ease-in-out hover:opacity-100"
             onClick={back}
           >
             ◄ Go Back
           </button>
-          <p className="w-full text-center text-3xl my-6 md:my-10 mt-20">
+          <p className="my-6 mt-20 w-full text-center text-3xl md:my-10">
             Add a small introduction
           </p>
-          <div className="flex flex-col md:flex-row w-full justify-center">
-            <div className="flex flex-col w-full md:w-6/12 items-center">
-              <p className="text-4xl md:text-5xl font-semibold text-[#ECA227]">
+          <div className="flex w-full flex-col justify-center md:flex-row">
+            <div className="flex w-full flex-col items-center md:w-6/12">
+              <p className="text-4xl font-semibold text-[#ECA227] md:text-5xl">
                 Your Name :
               </p>
               <input
                 name="name"
-                className="w-full bg-transparent text-base sm:text-lg md:text-xl p-4 outline-none ring-2 ring-[#ECA227] focus:ring-white rounded-md my-6 md:my-10 resize-none whitespace-pre"
+                className="my-6 w-full resize-none whitespace-pre rounded-md bg-transparent p-4 text-base outline-none ring-2 ring-[#ECA227] focus:ring-white sm:text-lg md:my-10 md:text-xl"
                 placeholder="Your Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 autoFocus
               />
-              <div className="grid md:grid-cols-2 gap-4 place-items-center">
-                <div className="flex flex-col gap-2 items-center">
+              <div className="grid place-items-center gap-4 md:grid-cols-2">
+                <div className="flex flex-col items-center gap-2">
                   <p className="text-2xl font-semibold text-[#ECA227]">
                     Profile Image URL:
                   </p>
-                  <span className="text-base text-white font-normal">
+                  <span className="text-base font-normal text-white">
                     {profileImage.name}
                   </span>
                 </div>
@@ -84,11 +84,11 @@ export default function AboutMe({ back }) {
                     setProfileImage(res[0]);
                   }}
                 />
-                <div className="flex flex-col gap-2 items-center">
+                <div className="flex flex-col items-center gap-2">
                   <p className="text-2xl font-semibold text-[#ECA227]">
                     Background Image URL : <span></span>
                   </p>
-                  <span className="text-base text-white font-normal">
+                  <span className="text-base font-normal text-white">
                     {backgroundImage.name}
                   </span>
                 </div>
@@ -100,18 +100,18 @@ export default function AboutMe({ back }) {
                   }}
                 />
               </div>
-              <p className="text-4xl md:text-5xl font-semibold text-[#ECA227]">
+              <p className="text-4xl font-semibold text-[#ECA227] md:text-5xl">
                 About Me :
               </p>
               <textarea
                 name=""
                 id="aboutme"
-                className="w-full bg-transparent h-72 md:h-96 text-base sm:text-lg md:text-xl p-4 outline-none ring-2 ring-[#ECA227] focus:ring-white rounded-md my-6 md:my-10 resize-none whitespace-pre"
+                className="my-6 h-72 w-full resize-none whitespace-pre rounded-md bg-transparent p-4 text-base outline-none ring-2 ring-[#ECA227] focus:ring-white sm:text-lg md:my-10 md:h-96 md:text-xl"
                 placeholder={textareaPlaceholder}
                 value={aboutme}
                 onChange={(e) => setAboutme(e.target.value)}
               ></textarea>
-              <div className="flex ">
+              <div className="flex">
                 <button
                   className="mr-4 opacity-60 hover:opacity-80"
                   title="Load Template"

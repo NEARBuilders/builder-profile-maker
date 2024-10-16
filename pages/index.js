@@ -43,7 +43,7 @@ export default function Home() {
       </Head>
       <>
         <CrispBanner />
-        <div className="overflow-x-hidden max-w-[100vw] p-3 md:p-4 text-white">
+        <div className="max-w-[100vw] overflow-x-hidden p-3 text-white md:p-4">
           <Broadcast />
           {/* <NavBar /> */}
           <HomePage />

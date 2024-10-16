@@ -1,5 +1,5 @@
-import { Social } from '@builddao/near-social-js';
-import { NETWORK_ID } from './near';
+import { Social } from "@builddao/near-social-js";
+import { NETWORK_ID } from "./near";
 
 export type Profile = {
   name: string;
@@ -13,8 +13,8 @@ export type Profile = {
 };
 
 export const SOCIAL_CONTRACT = {
-  mainnet: 'social.near',
-  testnet: 'v1.social08.testnet'
+  mainnet: "social.near",
+  testnet: "v1.social08.testnet"
 };
 
 const social = new Social({

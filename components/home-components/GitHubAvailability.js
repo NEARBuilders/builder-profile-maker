@@ -4,15 +4,15 @@ import { GITHUB_LOGO_LARGE_SVG } from "../elements/SVG";
 
 export default function GitHubAvailability() {
   return (
-    <div className="flex flex-col md:flex-row my-8 text-green-300">
-      <div className="w-full md:w-6/12 flex flex-col justify-center items-center">
+    <div className="my-8 flex flex-col text-green-300 md:flex-row">
+      <div className="flex w-full flex-col items-center justify-center md:w-6/12">
         <GITHUB_LOGO_LARGE_SVG />
       </div>
-      <div className="w-full md:w-6/12 flex flex-col justify-center my-6 md:my-0">
-        <p className="text-3xl sm:text-4xl md:text-5xl font-medium">
+      <div className="my-6 flex w-full flex-col justify-center md:my-0 md:w-6/12">
+        <p className="text-3xl font-medium sm:text-4xl md:text-5xl">
           We&apos;re Open Source
         </p>
-        <p className="text-gray-500 md:pr-10 my-6 md:text-lg 2xl:text-xl">
+        <p className="my-6 text-gray-500 md:pr-10 md:text-lg 2xl:text-xl">
           Yes you heard right, this website is open source and you can find code
           of this website on GitHub. You can request a feature, contribute to
           project by adding feedbacks and mentioning bugs if they exist.

@@ -43,20 +43,20 @@ export default function HomePage() {
         <AboutMe back={() => setIsVisible(false)} />
       ) : (
         <div className="scroll-smooth">
-          <div className="w-full flex flex-col md:flex-row py-16 md:py-28 min-h-[90vh] items-center relative">
-            <div className="flex flex-col w-full md:w-6/12 relative gap-2">
-              <div className="gap-1 w-full flex  items-center relative">
+          <div className="relative flex min-h-[90vh] w-full flex-col items-center py-16 md:flex-row md:py-28">
+            <div className="relative flex w-full flex-col gap-2 md:w-6/12">
+              <div className="relative flex w-full items-center gap-1">
                 <img
                   src="/logo_bdao.png"
                   alt="logo"
-                  className="w-60 h-36 mr-2"
+                  className="mr-2 h-36 w-60"
                 />
               </div>
               <p className="text-6xl md:text-7xl 2xl:text-8xl">
                 Profile Builder
               </p>
               {/* Text Input */}
-              <div className="flex flex-col sm:flex-row mt-8 md:my-8 2xl:my10 items-center">
+              <div className="2xl:my10 mt-8 flex flex-col items-center sm:flex-row md:my-8">
                 <form className="w-full" onSubmit={onNext}>
                   <input
                     type="text"
@@ -64,7 +64,7 @@ export default function HomePage() {
                     required={true}
                     onChange={(e) => setInput(e.target.value)}
                     autoFocus={true}
-                    className="border-b-2 border-[#ECA227] bg-transparent w-full sm:w-11/12 md:w-10/12 lg:w-8/12 text-xl sm:text-3xl md:text-xl lg:text-2xl 2xl:text-3xl outline-none focus:border-border-[#ECA227] focus:border-b-4 inline"
+                    className="focus:border-border-[#ECA227] inline w-full border-b-2 border-[#ECA227] bg-transparent text-xl outline-none focus:border-b-4 sm:w-11/12 sm:text-3xl md:w-10/12 md:text-xl lg:w-8/12 lg:text-2xl 2xl:text-3xl"
                     placeholder="Enter Your GitHub Username"
                   />
                   <button type="Submit">
@@ -73,11 +73,11 @@ export default function HomePage() {
                 </form>
               </div>
             </div>
-            <div className="flex w-full mt-16 md:mt-0 md:w-6/12 justify-center">
+            <div className="mt-16 flex w-full justify-center md:mt-0 md:w-6/12">
               <img
                 src="/hat_logo.png"
                 alt=""
-                className="w-full sm:w-8/12 select-none pointer-events-none rotate-3 animate-bounce"
+                className="pointer-events-none w-full rotate-3 animate-bounce select-none sm:w-8/12"
                 draggable="false"
               />
             </div>

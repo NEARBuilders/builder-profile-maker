@@ -8,13 +8,13 @@ export default function ScrollToTop() {
     window.scroll({
       top: 0,
       left: 0,
-      behavior: "smooth",
+      behavior: "smooth"
     });
   }
   return (
-    <div className="w-full flex justify-center md:justify-end">
+    <div className="flex w-full justify-center md:justify-end">
       <button
-        className="p-4 rounded-full bg-green-300 text-zinc-800 brightness-75 hover:brightness-90 transition-all ease-in-out duration-200 active:scale-95"
+        className="rounded-full bg-green-300 p-4 text-zinc-800 brightness-75 transition-all duration-200 ease-in-out hover:brightness-90 active:scale-95"
         onClick={() => topFunction()}
       >
         <ArrowUpIcon className="h-6 w-6" />

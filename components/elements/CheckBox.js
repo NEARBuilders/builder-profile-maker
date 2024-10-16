@@ -7,14 +7,14 @@ export default function CheckBox({ id, title }) {
     profileMaker.data.checkbox[id] = document.getElementById(id).checked;
   }
   return (
-    <p className="flex w-max items-center my-2">
+    <p className="my-2 flex w-max items-center">
       <input
         type="checkbox"
         name=""
         id={id}
         defaultChecked={profileMaker.data.checkbox[id]}
         onChange={chk}
-        className="w-4 h-4 mr-2 outline-none"
+        className="mr-2 h-4 w-4 outline-none"
       />
       {title}
     </p>

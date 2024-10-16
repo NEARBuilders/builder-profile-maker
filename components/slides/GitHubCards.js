@@ -35,24 +35,24 @@ export default function GitHubStats({ back }) {
       {isVisible ? (
         <Socials back={() => setIsVisible(false)} />
       ) : (
-        <div className="flex flex-col items-center fade-on-appear">
+        <div className="fade-on-appear flex flex-col items-center">
           <button
-            className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none"
+            className="absolute left-0 m-10 opacity-80 outline-none transition-all ease-in-out hover:opacity-100"
             onClick={back}
           >
             ◄ Go Back
           </button>
-          <p className="w-full text-center text-3xl my-10 mt-20">
+          <p className="my-10 mt-20 w-full text-center text-3xl">
             Flex your GitHub Stats
           </p>
           {/* Options */}
-          <div className="flex flex-wrap justify-center items-center">
+          <div className="flex flex-wrap items-center justify-center">
             Theme:
             <select
               id="theme"
               value={profileMaker.data.stats.theme}
               onChange={() => setTheme(document.getElementById("theme").value)}
-              className="bg-transparent py-1 px-2 outline-none"
+              className="bg-transparent px-2 py-1 outline-none"
             >
               {themes.map((item) => {
                 return (
@@ -81,9 +81,9 @@ export default function GitHubStats({ back }) {
           <p className="mt-4 text-green-300 opacity-90">
             please wait for images to load after changing any values
           </p>
-          <div className="w-full md:w-8/12 justify-center flex flex-col flex-wrap md:my-4">
+          <div className="flex w-full flex-col flex-wrap justify-center md:my-4 md:w-8/12">
             <img
-              className="m-2 select-none pointer-events-none"
+              className="pointer-events-none m-2 select-none"
               draggable="false"
               id="stats"
               src={`https://github-readme-stats.vercel.app/api?username=${

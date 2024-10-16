@@ -1,15 +1,15 @@
-import { makeAutoObservable } from 'mobx';
-import { NETWORK_ID, Wallet } from '../lib/near';
+import { makeAutoObservable } from "mobx";
+import { NETWORK_ID, Wallet } from "../lib/near";
 
 export class WalletStore {
   wallet: Wallet | undefined = undefined;
-  signedAccountId: string = '';
+  signedAccountId: string = "";
   networkId: string = NETWORK_ID;
 
   constructor() {
     makeAutoObservable(this);
   }
-  
+
   setNetworkId = (networkId: string) => {
     this.networkId = networkId;
   };

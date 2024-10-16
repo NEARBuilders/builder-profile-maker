@@ -73,7 +73,7 @@ export const themes = [
   "neon",
   "blue_navy",
   "calm_pink",
-  "ambient_gradient",
+  "ambient_gradient"
 ];
 
 export default themes;

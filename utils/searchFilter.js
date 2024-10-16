@@ -11,7 +11,7 @@ export function searchFilter(searchStr) {
     design: [],
     ml: [],
     cicdvcs: [],
-    others: [],
+    others: []
   };
   //   Filtering object using old school, for loop
   Object.keys(data).map(function (objectKey, index) {

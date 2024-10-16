@@ -168,13 +168,13 @@ export default function Preview({ back }) {
         )}
       </div>
       <div className="flex">
-        <p className="rounded-t-md bg-green-200 p-1 px-4 text-zinc-800 brightness-75">
+        <p className="rounded-t-md bg-orange-200 p-1 px-4 text-zinc-800 brightness-75">
           PREVIEW
         </p>
       </div>
       <div
         id="content"
-        className="w-full rounded-lg bg-zinc-800 p-3 py-6 text-zinc-100 shadow-xl shadow-green-200/20 ring-1 ring-green-200 md:w-8/12"
+        className="w-full rounded-lg bg-zinc-800 p-3 py-6 text-zinc-100 shadow-xl shadow-orange-200/20 ring-1 ring-orange-200 md:w-8/12"
       ></div>
       <p className="flex flex-wrap pt-12 font-semibold text-gray-400">
         What to Do Next ? :&nbsp;
@@ -190,7 +190,6 @@ export default function Preview({ back }) {
       </pre>
       {copiedAlertVisible && <ToastSuccess title="Copied Successfully !" />}
       {downloadAlertVisible && <ToastSuccess title="Download Started !" />}
-      {/* <FeedbackButton /> */}
     </div>
   );
 }

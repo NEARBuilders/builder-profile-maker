@@ -36,3 +36,5 @@ yarn-error.log*
 
 # util for testing 
 /data/update.js
+
+package-lock.json

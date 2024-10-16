@@ -4,7 +4,7 @@ import { GITHUB_LOGO_LARGE_SVG } from "../elements/SVG";
 
 export default function GitHubAvailability() {
   return (
-    <div className="my-8 flex flex-col text-green-300 md:flex-row">
+    <div className="my-8 flex flex-col text-orange-300 md:flex-row">
       <div className="flex w-full flex-col items-center justify-center md:w-6/12">
         <GITHUB_LOGO_LARGE_SVG />
       </div>

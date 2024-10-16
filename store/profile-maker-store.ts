@@ -15,20 +15,10 @@ class ProfileMakerStore {
       prv: false
     },
     socials: {
-      behance: "",
-      discord: "",
-      facebook: "",
-      instagram: "",
+      contra: "",
       linkedin: "",
-      medium: "",
-      pinterest: "",
-      quora: "",
-      reddit: "",
-      sof: "",
-      tiktok: "",
-      twitch: "",
       x: "",
-      youtube: ""
+      telegram: ""
     },
     tech: [] as string[],
     badge_theme: "for-the-badge",

@@ -20,7 +20,7 @@ export default function TextInputWithIcon({
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder={placeholder}
-        className="h-16 w-full border-b-2 border-green-300 bg-transparent p-4 outline-none focus:z-10 focus:border-green-200"
+        className="h-16 w-full border-b-2 border-orange-300 bg-transparent p-4 outline-none focus:z-10 focus:border-orange-200"
       />
 
       <label htmlFor={id} className="p-5">
@@ -32,7 +32,7 @@ export default function TextInputWithIcon({
           viewBox={viewBox}
           stroke="currentColor"
           aria-hidden="true"
-          className="h-8 w-8 text-green-300 opacity-75"
+          className="h-8 w-8 text-orange-300 opacity-75"
         >
           {children}
         </svg>

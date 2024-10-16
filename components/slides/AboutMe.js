@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useObserver } from "mobx-react";
+import React, { useState } from "react";
+import { useProfileMaker } from "../../contexts/profile-maker";
 import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
-import { useObserver } from "mobx-react";
 import GitHubStats from "./GitHubCards";
-import { LightBulbIcon } from "@heroicons/react/outline";
-import { useProfileMaker } from "../../contexts/profile-maker";
 
-import { UploadButton } from "../../utils/uploadthing";
+import { UploadDropzone } from "../../utils/uploadthing";
 
 export default function AboutMe({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -55,76 +54,111 @@ export default function AboutMe({ back }) {
           <p className="my-6 mt-20 w-full text-center text-3xl md:my-10">
             Add a small introduction
           </p>
-          <div className="flex w-full flex-col justify-center md:flex-row">
-            <div className="flex w-full flex-col items-center md:w-6/12">
-              <p className="text-4xl font-semibold text-[#ECA227] md:text-5xl">
-                Your Name :
-              </p>
-              <input
-                name="name"
-                className="my-6 w-full resize-none whitespace-pre rounded-md bg-transparent p-4 text-base outline-none ring-2 ring-[#ECA227] focus:ring-white sm:text-lg md:my-10 md:text-xl"
-                placeholder="Your Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                autoFocus
+          <div className="flex w-full flex-col md:flex-row">
+            <div className="mb-4 flex w-full items-center justify-center md:mb-0 md:w-6/12">
+              <img
+                src="/hpill.svg"
+                alt=""
+                className="pointer-events-none aspect-square w-8/12 select-none"
+                draggable="false"
               />
-              <div className="grid place-items-center gap-4 md:grid-cols-2">
-                <div className="flex flex-col items-center gap-2">
-                  <p className="text-2xl font-semibold text-[#ECA227]">
-                    Profile Image URL:
-                  </p>
-                  <span className="text-base font-normal text-white">
-                    {profileImage.name}
-                  </span>
+            </div>
+            <div className="flex w-full flex-col items-center md:w-6/12">
+              <div className="mx-auto w-full max-w-2xl space-y-6 p-6">
+                <div className="space-y-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-xl font-medium text-orange-500"
+                  >
+                    What should we call you?
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    className="w-full rounded-md border-2 border-orange-500 bg-transparent p-2 outline-none focus:border-white"
+                    placeholder="Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
                 </div>
-                <UploadButton
-                  endpoint="imageUploader"
-                  onClientUploadComplete={(res) => {
-                    console.log("File: ", res);
-                    setProfileImage(res[0]);
-                  }}
-                />
-                <div className="flex flex-col items-center gap-2">
-                  <p className="text-2xl font-semibold text-[#ECA227]">
-                    Background Image URL : <span></span>
-                  </p>
-                  <span className="text-base font-normal text-white">
-                    {backgroundImage.name}
-                  </span>
+
+                {/* Profile Image Upload */}
+                <div className="grid w-full place-items-center gap-4 md:grid-cols-2">
+                  <div className="flex w-full flex-col items-center gap-2">
+                    <label
+                      htmlFor="profileImage"
+                      className="text-lg font-medium text-orange-500 md:text-xl"
+                    >
+                      Profile Image
+                    </label>
+                    {profileImage ? (
+                      <img
+                        src={profileImage}
+                        alt="Profile"
+                        className="h-full w-full rounded-md object-cover"
+                      />
+                    ) : (
+                      <div className="text-center">
+                        <UploadDropzone
+                          endpoint="imageUploader"
+                          onClientUploadComplete={(res) => {
+                            console.log("File: ", res);
+                            setProfileImage(res[0]);
+                          }}
+                        />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Background Image Upload */}
+                  <div className="flex w-full flex-col items-center gap-2">
+                    <label
+                      htmlFor="backgroundImage"
+                      className="text-lg font-medium text-orange-500 md:text-xl"
+                    >
+                      Background Image
+                    </label>
+                    {backgroundImage ? (
+                      <img
+                        src={backgroundImage}
+                        alt="Background"
+                        className="h-full w-full rounded-md object-cover"
+                      />
+                    ) : (
+                      <div className="text-center">
+                        <UploadDropzone
+                          endpoint="imageUploader"
+                          onClientUploadComplete={(res) => {
+                            console.log("Files: ", res);
+                            setBackgroundImage(res[0]);
+                          }}
+                        />
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <UploadButton
-                  endpoint="imageUploader"
-                  onClientUploadComplete={(res) => {
-                    console.log("Files: ", res);
-                    setBackgroundImage(res[0]);
-                  }}
-                />
-              </div>
-              <p className="text-4xl font-semibold text-[#ECA227] md:text-5xl">
-                About Me :
-              </p>
-              <textarea
-                name=""
-                id="aboutme"
-                className="my-6 h-72 w-full resize-none whitespace-pre rounded-md bg-transparent p-4 text-base outline-none ring-2 ring-[#ECA227] focus:ring-white sm:text-lg md:my-10 md:h-96 md:text-xl"
-                placeholder={textareaPlaceholder}
-                value={aboutme}
-                onChange={(e) => setAboutme(e.target.value)}
-              ></textarea>
-              <div className="flex">
-                <button
-                  className="mr-4 opacity-60 hover:opacity-80"
-                  title="Load Template"
-                  onClick={() => setAboutme(textareaPlaceholder)}
-                >
-                  <LightBulbIcon className="w-6 stroke-1"></LightBulbIcon>
-                </button>
-                <NextButton onClick={() => onNext()} />
+                <div className="space-y-2">
+                  <label
+                    htmlFor="aboutMe"
+                    className="block text-xl font-medium text-orange-500"
+                  >
+                    Tell us about yourself:
+                  </label>
+                  <textarea
+                    id="aboutMe"
+                    className="h-48 w-full resize-none rounded-md border-2 border-orange-500 bg-transparent p-2 outline-none focus:border-white"
+                    placeholder={textareaPlaceholder}
+                    value={aboutme}
+                    onChange={(e) => setAboutme(e.target.value)}
+                  ></textarea>
+                </div>
+                <div className="flex">
+                  <NextButton onClick={() => onNext()} />
+                </div>
               </div>
             </div>
           </div>
           <Pagination val={1} />
-          {/* <FeedbackButton /> */}
         </div>
       )}
     </>

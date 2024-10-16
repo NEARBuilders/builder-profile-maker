@@ -8,7 +8,7 @@ export default function NextButton({ onClick }) {
   }
   return (
     <button
-      className="group relative inline-block w-max select-none rounded-lg border-2 border-green-300 px-6 py-3 font-bold uppercase tracking-widest text-green-100 hover:border-green-200"
+      className="group relative inline-block w-max select-none rounded-lg border-2 border-orange-500 px-6 py-3 font-bold uppercase tracking-widest text-orange-100 hover:border-orange-200"
       onClick={() => onClick() & topFunction()}
     >
       Next

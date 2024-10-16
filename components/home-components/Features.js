@@ -65,10 +65,10 @@ export default function Features() {
     <div className="py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-base font-semibold uppercase tracking-wide text-green-300">
+          <h2 className="text-base font-semibold uppercase tracking-wide text-orange-300">
             Features
           </h2>
-          <p className="mt-2 text-3xl font-bold leading-8 text-green-200 sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold leading-8 text-orange-200 sm:text-4xl">
             We got everything that you need !
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
@@ -82,10 +82,10 @@ export default function Features() {
             {features.map((feature) => (
               <div key={feature.name} className="relative">
                 <dt>
-                  <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-green-300 text-zinc-800">
+                  <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-orange-300 text-zinc-800">
                     <feature.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
-                  <p className="ml-16 text-lg font-medium leading-6 text-green-200">
+                  <p className="ml-16 text-lg font-medium leading-6 text-orange-200">
                     {feature.name}
                   </p>
                 </dt>

@@ -58,7 +58,7 @@ export default function Footer() {
           contact@nearbuilders.com
         </a>
       </div>
-      <div className="flex w-full items-center justify-center text-green-200">
+      <div className="flex w-full items-center justify-center text-orange">
         <p className="mt-2 text-center opacity-75 hover:opacity-95">
           Made with 💛 by{" "}
           <Link

@@ -3,7 +3,7 @@ import React from "react";
 export default function ButtonWithSVG({ title, d, onClick }) {
   return (
     <button
-      className="group m-2 flex justify-center rounded-md border-2 border-green-200 p-2 px-6 text-green-200 shadow-md transition-all duration-200 ease-in-out hover:scale-[1.01] hover:border-green-300 hover:text-green-300 hover:shadow-green-300/20 active:scale-[0.97]"
+      className="group m-2 flex justify-center rounded-md border-2 border-orange-200 p-2 px-6 text-orange-200 shadow-md transition-all duration-200 ease-in-out hover:scale-[1.01] hover:border-orange-300 hover:text-orange-300 hover:shadow-orange-300/20 active:scale-[0.97]"
       onClick={onClick}
     >
       {title}

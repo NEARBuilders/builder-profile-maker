@@ -114,7 +114,7 @@ ${profileMaker.data.tech
               />
             </div>
             <div className="flex w-full flex-col md:w-6/12">
-              <p className="text-4xl font-semibold text-green-300 md:text-5xl">
+              <p className="text-4xl font-semibold text-orange-300 md:text-5xl">
                 Donate :
               </p>
               <TextInputWithImage
@@ -140,7 +140,6 @@ ${profileMaker.data.tech
               <div className="mt-4 flex w-full justify-center md:w-10/12 md:justify-end">
                 <NextButton onClick={() => onNext()} />
                 <Pagination val={5} />
-                {/* <FeedbackButton /> */}
               </div>
             </div>
           </div>

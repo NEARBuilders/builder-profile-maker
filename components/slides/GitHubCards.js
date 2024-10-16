@@ -78,7 +78,7 @@ export default function GitHubStats({ back }) {
               onClick={() => setIncludePrivate(!includePrivate)}
             />
           </div>
-          <p className="mt-4 text-green-300 opacity-90">
+          <p className="mt-4 text-orange-300 opacity-90">
             please wait for images to load after changing any values
           </p>
           <div className="flex w-full flex-col flex-wrap justify-center md:my-4 md:w-8/12">
@@ -94,7 +94,6 @@ export default function GitHubStats({ back }) {
           </div>
           <NextButton onClick={() => onNext()} />
           <Pagination val={2} />
-          {/* <FeedbackButton /> */}
         </div>
       )}
     </>

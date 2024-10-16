@@ -23,7 +23,7 @@ export default function BadgeSelect({ label, url }) {
     <>
       {isAdded ? (
         <div
-          className="transition-scale m-2 flex cursor-pointer select-none items-center rounded-md bg-green-400 text-zinc-900 shadow-md ring-green-400/40 duration-200 ease-in-out hover:ring-1 active:scale-[0.98]"
+          className="transition-scale m-2 flex cursor-pointer select-none items-center rounded-md bg-orange-400 text-zinc-900 shadow-md ring-orange-400/40 duration-200 ease-in-out hover:ring-1 active:scale-[0.98]"
           onClick={onClickFun}
         >
           <p className="p-1 px-2">{label}</p>
@@ -47,7 +47,7 @@ export default function BadgeSelect({ label, url }) {
         </div>
       ) : (
         <div
-          className="transition-scale m-2 flex cursor-pointer select-none items-center rounded-md bg-green-100 shadow-md ring-green-100/40 duration-200 ease-in-out hover:ring-1 active:scale-[0.98im]"
+          className="transition-scale m-2 flex cursor-pointer select-none items-center rounded-md bg-orange-100 shadow-md ring-orange-100/40 duration-200 ease-in-out hover:ring-1 active:scale-[0.98im]"
           onClick={onClickFun}
         >
           <p className="p-1 px-2">{label}</p>

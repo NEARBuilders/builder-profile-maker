@@ -15,7 +15,7 @@ export default function TextInputWithImage({ id, imgUrl, placeholder }) {
         placeholder={placeholder}
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        className="h-16 w-full border-b-2 border-green-300 bg-transparent p-4 outline-none focus:z-10 focus:border-green-200"
+        className="h-16 w-full border-b-2 border-orange-300 bg-transparent p-4 outline-none focus:z-10 focus:border-orange-200"
       />
 
       <label htmlFor={id} className="p-5">
@@ -23,7 +23,7 @@ export default function TextInputWithImage({ id, imgUrl, placeholder }) {
         <img
           src={imgUrl}
           alt=""
-          className="aspect-square w-12 rounded-md bg-green-100 p-1"
+          className="aspect-square w-12 rounded-md bg-orange-100 p-1"
         />
       </label>
     </div>

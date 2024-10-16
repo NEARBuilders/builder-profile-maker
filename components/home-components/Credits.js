@@ -34,7 +34,7 @@ export default function Credits() {
     }
   ];
   return (
-    <div className="my-10 flex w-full flex-col items-center text-green-300 md:my-14">
+    <div className="my-10 flex w-full flex-col items-center text-orange-300 md:my-14">
       <p className="text-4xl font-semibold">Credits</p>
       <p className="my-4 w-full text-center text-xl text-gray-500 md:w-8/12">
         We believe in giving credit where it&apos;s due. To all the OG creators,

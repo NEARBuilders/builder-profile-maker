@@ -1,9 +1,8 @@
 import Head from "next/head";
-import Broadcast from "../components/broadcast/Broadcast";
-import NavBar from "../components/NavBar";
-import Footer from "../components/elements/Footer";
-import HomePage from "../components/slides/HomePage";
 import { CrispBanner } from "../components/crisp";
+import Footer from "../components/elements/Footer";
+import NavBar from "../components/NavBar";
+import HomePage from "../components/slides/HomePage";
 
 export default function Home() {
   return (
@@ -39,14 +38,15 @@ export default function Home() {
           property="x:image"
           content="https://join.nearbuilders.org/webimg.png"
         />
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <>
         <CrispBanner />
-        <div className="max-w-[100vw] overflow-x-hidden p-3 text-white md:p-4">
-          <Broadcast />
+        <div className="flex min-h-screen max-w-[100vw] flex-col overflow-x-hidden p-3 text-white md:p-4">
           {/* <NavBar /> */}
-          <HomePage />
+          <div className="flex-grow">
+            <HomePage />
+          </div>
           <Footer />
         </div>
       </>

@@ -145,64 +145,12 @@ export const data = {
   ],
   frameworks: [
     {
-      label: ".NET",
-      url: "![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)"
-    },
-    {
-      label: "ADONISJS",
-      url: "![AdonisJS](https://img.shields.io/badge/adonisjs-%23220052.svg?style=for-the-badge&logo=adonisjs&logoColor=white)"
-    },
-    {
-      label: "ALPINE.JS",
-      url: "![Alpine.js](https://img.shields.io/badge/alpinejs-white.svg?style=for-the-badge&logo=alpinedotjs&logoColor=%238BC0D0)"
-    },
-    {
-      label: "ANACONDA",
-      url: "![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white)"
-    },
-    {
       label: "ANGULAR",
       url: "![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)"
     },
     {
-      label: "ANGULAR.JS",
-      url: "![Angular.js](https://img.shields.io/badge/angular.js-%23E23237.svg?style=for-the-badge&logo=angularjs&logoColor=white)"
-    },
-    {
-      label: "ANT DESIGN",
-      url: "![Ant-Design](https://img.shields.io/badge/-AntDesign-%230170FE?style=for-the-badge&logo=ant-design&logoColor=white)"
-    },
-    {
-      label: "APACHE SPARK",
-      url: "![Apache Spark](https://img.shields.io/badge/Apache%20Spark-FDEE21?style=for-the-badge&logo=apachespark&logoColor=black)"
-    },
-    {
-      label: "APACHE KAFKA",
-      url: "![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-000?style=for-the-badge&logo=apachekafka)"
-    },
-    {
-      label: "APACHE HADOOP",
-      url: "![Apache Hadoop](https://img.shields.io/badge/Apache%20Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black)"
-    },
-    {
-      label: "APACHE HIVE",
-      url: "![Apache Hive](https://img.shields.io/badge/Apache%20Hive-FDEE21?style=for-the-badge&logo=apachehive&logoColor=black)"
-    },
-    {
-      label: "APOLLO GRAPHQL",
-      url: "![Apollo-GraphQL](https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql)"
-    },
-    {
       label: "ASTRO",
       url: "![Astro](https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white)"
-    },
-    {
-      label: "AURELIA",
-      url: "![Aurelia](https://img.shields.io/badge/aurelia-%23ED2B88.svg?style=for-the-badge&logo=aurelia&logoColor=fff)"
-    },
-    {
-      label: "BLAZOR",
-      url: "![Blazor](https://img.shields.io/badge/blazor-%235C2D91.svg?style=for-the-badge&logo=blazor&logoColor=white)"
     },
     {
       label: "BOOTSTRAP",
@@ -221,24 +169,12 @@ export const data = {
       url: "![Bun](https://img.shields.io/badge/Bun-%23000000.svg?style=for-the-badge&logo=bun&logoColor=white)"
     },
     {
-      label: "CELERY",
-      url: "![Celery](https://img.shields.io/badge/celery-%23a9cc54.svg?style=for-the-badge&logo=celery&logoColor=ddf4a4)"
-    },
-    {
       label: "CHAKRA UI",
       url: "![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white)"
     },
     {
       label: "CHART.JS",
       url: "![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white)"
-    },
-    {
-      label: "CODE IGNITER",
-      url: "![Code-Igniter](https://img.shields.io/badge/CodeIgniter-%23EF4223.svg?style=for-the-badge&logo=codeIgniter&logoColor=white)"
-    },
-    {
-      label: "CONTEXT API",
-      url: "![Context-API](https://img.shields.io/badge/Context--Api-000000?style=for-the-badge&logo=react)"
     },
     {
       label: "DAISYUI",
@@ -249,16 +185,8 @@ export const data = {
       url: "![Deno JS](https://img.shields.io/badge/deno%20js-000000?style=for-the-badge&logo=deno&logoColor=white)"
     },
     {
-      label: "DIRECTUS",
-      url: "![Directus](https://img.shields.io/badge/directus-%2364f.svg?style=for-the-badge&logo=directus&logoColor=white)"
-    },
-    {
       label: "DJANGO",
       url: "![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)"
-    },
-    {
-      label: "DJANGOREST",
-      url: "![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)"
     },
     {
       label: "DRUPAL",
@@ -301,60 +229,20 @@ export const data = {
       url: "![Gatsby](https://img.shields.io/badge/Gatsby-%23663399.svg?style=for-the-badge&logo=gatsby&logoColor=white)"
     },
     {
-      label: "GREEN SOCK",
-      url: "![Green Sock](https://img.shields.io/badge/green%20sock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)"
-    },
-    {
       label: "GULP",
       url: "![Gulp](https://img.shields.io/badge/GULP-%23CF4647.svg?style=for-the-badge&logo=gulp&logoColor=white)"
-    },
-    {
-      label: "INSOMNIA",
-      url: "![Insomnia](https://img.shields.io/badge/Insomnia-black?style=for-the-badge&logo=insomnia&logoColor=5849BE)"
-    },
-    {
-      label: "HUGO",
-      url: "![Hugo](https://img.shields.io/badge/Hugo-black.svg?style=for-the-badge&logo=Hugo)"
     },
     {
       label: "IONIC",
       url: "![Ionic](https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white)"
     },
     {
-      label: "AIOHTTP",
-      url: "![AIOHTTP](https://img.shields.io/badge/iohttp-%232C5bb4.svg?style=for-the-badge&logo=aiohttp&logoColor=white)"
-    },
-    {
-      label: "JASMINE",
-      url: "![Jasmine](https://img.shields.io/badge/jasmine-%238A4182.svg?style=for-the-badge&logo=jasmine&logoColor=white)"
-    },
-    {
-      label: "JAVAFX",
-      url: "![JavaFX](https://img.shields.io/badge/javafx-%23FF0000.svg?style=for-the-badge&logo=javafx&logoColor=white)"
-    },
-    {
-      label: "JINJA",
-      url: "![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)"
-    },
-    {
-      label: "JOOMLA",
-      url: "![Joomla](https://img.shields.io/badge/joomla-%235091CD.svg?style=for-the-badge&logo=joomla&logoColor=white)"
-    },
-    {
       label: "JQUERY",
       url: "![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)"
     },
     {
-      label: "JWT/JSON WEB TOKEN",
-      url: "![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)"
-    },
-    {
       label: "LARAVEL",
       url: "![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)"
-    },
-    {
-      label: "LESS",
-      url: "![Less](https://img.shields.io/badge/less-2B4C80?style=for-the-badge&logo=less&logoColor=white)"
     },
     {
       label: "MUI",
@@ -365,88 +253,16 @@ export const data = {
       url: "![Metero JS](https://img.shields.io/badge/meteorjs-%23d74c4c.svg?style=for-the-badge&logo=meteor&logoColor=white)"
     },
     {
-      label: "MANTINE",
-      url: "![Mantine](https://img.shields.io/badge/Mantine-ffffff?style=for-the-badge&logo=Mantine&logoColor=339af0)"
-    },
-    {
-      label: "MAXCOMPUTE",
-      url: "![MaxCompute](https://img.shields.io/badge/MaxCompute-%23FF6701?style=for-the-badge&logo=alibabacloud&logoColor=white)"
-    },
-    {
-      label: "NPM",
-      url: "![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)"
-    },
-    {
-      label: "NESTJS",
-      url: "![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)"
-    },
-    {
       label: "NEXT JS",
       url: "![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)"
     },
     {
-      label: "NODE.JS",
+      label: "NODE",
       url: "![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)"
-    },
-    {
-      label: "NODEMON",
-      url: "![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)"
-    },
-    {
-      label: "NODE-RED",
-      url: "![Node-RED](https://img.shields.io/badge/Node--RED-%238F0000.svg?style=for-the-badge&logo=node-red&logoColor=white)"
     },
     {
       label: "NUXT JS",
       url: "![Nuxt JS](https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxt.js&logoColor=#00DC82)"
-    },
-    {
-      label: "NX",
-      url: "![Nx](https://img.shields.io/badge/nx-143055?style=for-the-badge&logo=nx&logoColor=white)"
-    },
-    {
-      label: "OPENCV",
-      url: "![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)"
-    },
-    {
-      label: "OPENGL",
-      url: "![OpenGL](https://img.shields.io/badge/OpenGL-%23FFFFFF.svg?style=for-the-badge&logo=opengl)"
-    },
-    {
-      label: "P5JS",
-      url: "![P5js](https://img.shields.io/badge/p5.js-ED225D?style=for-the-badge&logo=p5.js&logoColor=FFFFFF)"
-    },
-    {
-      label: "PNPM",
-      url: "![PNPM](https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=for-the-badge&logo=pnpm&logoColor=f69220)"
-    },
-    {
-      label: "POETRY",
-      url: "![Poetry](https://img.shields.io/badge/Poetry-%233B82F6.svg?style=for-the-badge&logo=poetry&logoColor=0B3D8D)"
-    },
-    {
-      label: "PREFECT",
-      url: "![Prefect](https://img.shields.io/badge/Prefect-%23ffffff.svg?style=for-the-badge&logo=prefect&logoColor=white)"
-    },
-    {
-      label: "PUG",
-      url: "![Pug](https://img.shields.io/badge/Pug-FFF?style=for-the-badge&logo=pug&logoColor=A86454)"
-    },
-    {
-      label: "QT",
-      url: "![Qt](https://img.shields.io/badge/Qt-%23217346.svg?style=for-the-badge&logo=Qt&logoColor=white)"
-    },
-    {
-      label: "QUASAR",
-      url: "![Quasar](https://img.shields.io/badge/Quasar-16B7FB?style=for-the-badge&logo=quasar&logoColor=black)"
-    },
-    {
-      label: "ROS",
-      url: "![ROS](https://img.shields.io/badge/ros-%230A0FF9.svg?style=for-the-badge&logo=ros&logoColor=white)"
-    },
-    {
-      label: "RABBITMQ",
-      url: "![RabbitMQ](https://img.shields.io/badge/rabbitmq-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white)"
     },
     {
       label: "RADIX UI",
@@ -485,56 +301,16 @@ export const data = {
       url: "![Remix](https://img.shields.io/badge/remix-%23000.svg?style=for-the-badge&logo=remix&logoColor=white)"
     },
     {
-      label: "ROLLUPJS",
-      url: "![RollupJS](https://img.shields.io/badge/RollupJS-ef3335?style=for-the-badge&logo=rollup.js&logoColor=white)"
-    },
-    {
-      label: "RXDB",
-      url: "![RxDB](https://img.shields.io/badge/rxdb-%238D1F89.svg?style=for-the-badge&logo=rxdb&logoColor=white)"
-    },
-    {
-      label: "RXJS",
-      url: "![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)"
-    },
-    {
-      label: "SASS",
-      url: "![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)"
-    },
-    {
-      label: "SEMANTIC UI REACT",
-      url: "![Semantic UI React](https://img.shields.io/badge/Semantic%20UI%20React-%2335BDB2.svg?style=for-the-badge&logo=SemanticUIReact&logoColor=white)"
-    },
-    {
-      label: "SOCKET.IO",
-      url: "![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101)"
-    },
-    {
       label: "SOLIDJS",
       url: "![SolidJS](https://img.shields.io/badge/SolidJS-2c4f7c?style=for-the-badge&logo=solid&logoColor=c8c9cb)"
     },
     {
-      label: "SPRING",
+      label: "JAVA SPRING",
       url: "![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)"
-    },
-    {
-      label: "STRAPI",
-      url: "![Strapi](https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white)"
-    },
-    {
-      label: "STYLED COMPONENTS",
-      url: "![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)"
-    },
-    {
-      label: "STYLUS",
-      url: "![Stylus](https://img.shields.io/badge/stylus-%23ff6347.svg?style=for-the-badge&logo=stylus&logoColor=white)"
     },
     {
       label: "SVELTE",
       url: "![Svelte](https://img.shields.io/badge/svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white)"
-    },
-    {
-      label: "SYMFONY",
-      url: "![Symfony](https://img.shields.io/badge/symfony-%23000000.svg?style=for-the-badge&logo=symfony&logoColor=white)"
     },
     {
       label: "TAILWINDCSS",
@@ -549,18 +325,6 @@ export const data = {
       url: "![Three js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white)"
     },
     {
-      label: "THYMELEAF",
-      url: "![Thymeleaf](https://img.shields.io/badge/Thymeleaf-%23005C0F.svg?style=for-the-badge&logo=Thymeleaf&logoColor=white)"
-    },
-    {
-      label: "TRPC",
-      url: "![Badge Name](https://img.shields.io/badge/tRPC-%232596BE.svg?style=for-the-badge&logo=tRPC&logoColor=white)"
-    },
-    {
-      label: "TYPEGRAPHQL",
-      url: "![Type-graphql](https://img.shields.io/badge/-TypeGraphQL-%23C04392?style=for-the-badge)"
-    },
-    {
       label: "UNOCSS",
       url: "![UnoCSS](https://img.shields.io/badge/unocss-333333.svg?style=for-the-badge&logo=unocss&logoColor=white)"
     },
@@ -573,36 +337,8 @@ export const data = {
       url: "![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)"
     },
     {
-      label: "VUETIFY",
-      url: "![Vuetify](https://img.shields.io/badge/Vuetify-1867C0?style=for-the-badge&logo=vuetify&logoColor=AEDDFF)"
-    },
-    {
-      label: "WEBGL",
-      url: "![WebGL](https://img.shields.io/badge/WebGL-990000?logo=webgl&logoColor=white&style=for-the-badge)"
-    },
-    {
-      label: "WEBPACK",
-      url: "![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)"
-    },
-    {
-      label: "WEB3.JS",
-      url: "![Web3.js](https://img.shields.io/badge/web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white)"
-    },
-    {
-      label: "WINDICSS",
-      url: "![Windicss](https://img.shields.io/badge/windicss-48B0F1.svg?style=for-the-badge&logo=windi-css&logoColor=white)"
-    },
-    {
       label: "WORDPRESS",
       url: "![WordPress](https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white)"
-    },
-    {
-      label: "XAMARIN",
-      url: "![Xamarin](https://img.shields.io/badge/Xamarin-3199DC?style=for-the-badge&logo=xamarin&logoColor=white)"
-    },
-    {
-      label: "YARN",
-      url: "![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)"
     },
     {
       label: "ZOD",
@@ -650,18 +386,6 @@ export const data = {
   // Database / ORM
   database: [
     {
-      label: "AMAZON DYNAMODB",
-      url: "![AmazonDynamoDB](https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=for-the-badge&logo=Amazon%20DynamoDB&logoColor=white)"
-    },
-    {
-      label: "CASSANDRA",
-      url: "![ApacheCassandra](https://img.shields.io/badge/cassandra-%231287B1.svg?style=for-the-badge&logo=apache-cassandra&logoColor=white)"
-    },
-    {
-      label: "COCKROACH LABS",
-      url: "![CockroachLabs](https://img.shields.io/badge/Cockroach%20Labs-6933FF?style=for-the-badge&logo=Cockroach%20Labs&logoColor=white)"
-    },
-    {
       label: "COUCHBASE",
       url: "![Couchbase](https://img.shields.io/badge/Couchbase-EA2328?style=for-the-badge&logo=couchbase&logoColor=white)"
     },
@@ -670,20 +394,8 @@ export const data = {
       url: "![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34)"
     },
     {
-      label: "INFLUXDB",
-      url: "![InfluxDB](https://img.shields.io/badge/InfluxDB-22ADF6?style=for-the-badge&logo=InfluxDB&logoColor=white)"
-    },
-    {
       label: "MARIADB",
       url: "![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)"
-    },
-    {
-      label: "MUSICBRAINZ",
-      url: "![MusicBrainz](https://img.shields.io/badge/Musicbrainz-EB743B?style=for-the-badge&logo=musicbrainz&logoColor=BA478F)"
-    },
-    {
-      label: "MICROSOFT SQL SERVER",
-      url: "![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)"
     },
     {
       label: "MONGODB",
@@ -694,28 +406,12 @@ export const data = {
       url: "![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)"
     },
     {
-      label: "NEO4J",
-      url: "![Neo4J](https://img.shields.io/badge/Neo4j-008CC1?style=for-the-badge&logo=neo4j&logoColor=white)"
-    },
-    {
-      label: "PLANETSCALE",
-      url: "![PlanetScale](https://img.shields.io/badge/planetscale-%23000000.svg?style=for-the-badge&logo=planetscale&logoColor=white)"
-    },
-    {
       label: "POSTGRES",
       url: "![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)"
     },
     {
-      label: "REALM",
-      url: "![Realm](https://img.shields.io/badge/Realm-39477F?style=for-the-badge&logo=realm&logoColor=white)"
-    },
-    {
       label: "REDIS",
       url: "![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)"
-    },
-    {
-      label: "SINGLE STORE",
-      url: "![Single Store](https://img.shields.io/badge/Single%20Store-AA00FF?style=for-the-badge&logo=singlestore&logoColor=white)"
     },
     {
       label: "SQLITE",
@@ -730,71 +426,11 @@ export const data = {
       url: "![SurrealDB](https://img.shields.io/badge/SurrealDB-FF00A0?style=for-the-badge&logo=surrealdb&logoColor=white)"
     },
     {
-      label: "TERADATA",
-      url: "![Teradata](https://img.shields.io/badge/Teradata-F37440?style=for-the-badge&logo=teradata&logoColor=white)"
-    },
-    {
-      label: "HIBERNATE",
-      url: "![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white)"
-    },
-    {
       label: "PRISMA",
       url: "![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)"
     },
-    {
-      label: "SEQUELIZE",
-      url: "![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)"
-    },
-    {
-      label: "QUILL",
-      url: "![Quill](https://img.shields.io/badge/Quill-52B0E7?style=for-the-badge&logo=apache&logoColor=white)"
-    }
   ],
   design: [
-    {
-      label: "ADOBE",
-      url: "![Adobe](https://img.shields.io/badge/adobe-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white)"
-    },
-    {
-      label: "ADOBE ACROBAT READER",
-      url: "![Adobe Acrobat Reader](https://img.shields.io/badge/Adobe%20Acrobat%20Reader-EC1C24.svg?style=for-the-badge&logo=Adobe%20Acrobat%20Reader&logoColor=white)"
-    },
-    {
-      label: "ADOBE AFTER EFFECTS",
-      url: "![Adobe After Effects](https://img.shields.io/badge/Adobe%20After%20Effects-9999FF.svg?style=for-the-badge&logo=Adobe%20After%20Effects&logoColor=white)"
-    },
-    {
-      label: "ADOBE AUDITION",
-      url: "![Adobe Audition](https://img.shields.io/badge/Adobe%20Audition-9999FF.svg?style=for-the-badge&logo=Adobe%20Audition&logoColor=white)"
-    },
-    {
-      label: "ADOBE CREATIVE CLOUD",
-      url: "![Adobe Creative Cloud](https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA1F26.svg?style=for-the-badge&logo=Adobe%20Creative%20Cloud&logoColor=white)"
-    },
-    {
-      label: "ADOBE DREAMWEAVER",
-      url: "![Adobe Dreamweaver](https://img.shields.io/badge/Adobe%20Dreamweaver-FF61F6.svg?style=for-the-badge&logo=Adobe%20Dreamweaver&logoColor=white)"
-    },
-    {
-      label: "ADOBE FONTS",
-      url: "![Adobe Fonts](https://img.shields.io/badge/Adobe%20Fonts-000B1D.svg?style=for-the-badge&logo=Adobe%20Fonts&logoColor=white)"
-    },
-    {
-      label: "ADOBE ILLUSTRATOR",
-      url: "![Adobe Illustrator](https://img.shields.io/badge/adobe%20illustrator-%23FF9A00.svg?style=for-the-badge&logo=adobe%20illustrator&logoColor=white)"
-    },
-    {
-      label: "ADOBE INDESIGN",
-      url: "![Adobe InDesign](https://img.shields.io/badge/Adobe%20InDesign-49021F?style=for-the-badge&logo=adobeindesign&logoColor=FF3366)"
-    },
-    {
-      label: "ADOBE LIGHTROOM",
-      url: "![Adobe Lightroom](https://img.shields.io/badge/Adobe%20Lightroom-31A8FF.svg?style=for-the-badge&logo=Adobe%20Lightroom&logoColor=white)"
-    },
-    {
-      label: "ADOBE LIGHTROOM CLASSIC",
-      url: "![Adobe Lightroom Classic](https://img.shields.io/badge/Adobe%20Lightroom%20Classic-31A8FF.svg?style=for-the-badge&logo=Adobe%20Lightroom%20Classic&logoColor=white)"
-    },
     {
       label: "ADOBE PHOTOSHOP",
       url: "![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white)"
@@ -802,22 +438,6 @@ export const data = {
     {
       label: "ADOBE PREMIERE PRO",
       url: "![Adobe Premiere Pro](https://img.shields.io/badge/Adobe%20Premiere%20Pro-9999FF.svg?style=for-the-badge&logo=Adobe%20Premiere%20Pro&logoColor=white)"
-    },
-    {
-      label: "ADOBE XD",
-      url: "![Adobe XD](https://img.shields.io/badge/Adobe%20XD-470137?style=for-the-badge&logo=Adobe%20XD&logoColor=#FF61F6)"
-    },
-    {
-      label: "ASEPRITE",
-      url: "![Aseprite](https://img.shields.io/badge/Aseprite-FFFFFF?style=for-the-badge&logo=Aseprite&logoColor=#7D929E)"
-    },
-    {
-      label: "AFFINITY DESIGNER",
-      url: "![Affinity Designer](https://img.shields.io/badge/affinity%20desginer-%231B72BE.svg?style=for-the-badge&logo=affinity-designer&logoColor=white)"
-    },
-    {
-      label: "AFFINITY PHOTO",
-      url: "![Affinity Photo](https://img.shields.io/badge/affinityphoto-%237E4DD2.svg?style=for-the-badge&logo=affinity-photo&logoColor=white)"
     },
     {
       label: "BLENDER",
@@ -843,30 +463,6 @@ export const data = {
       label: "GIMP",
       url: "![Gimp](https://img.shields.io/badge/Gimp-657D8B?style=for-the-badge&logo=gimp&logoColor=FFFFFF)"
     },
-    {
-      label: "INKSCAPE",
-      url: "![Inkscape](https://img.shields.io/badge/Inkscape-e0e0e0?style=for-the-badge&logo=inkscape&logoColor=080A13)"
-    },
-    {
-      label: "INVISION",
-      url: "![Invision](https://img.shields.io/badge/invision-FF3366?style=for-the-badge&logo=invision&logoColor=white)"
-    },
-    {
-      label: "KRITA",
-      url: "![Krita](https://img.shields.io/badge/Krita-203759?style=for-the-badge&logo=krita&logoColor=EEF37B)"
-    },
-    {
-      label: "PROTO.IO",
-      url: "![Proto.io](https://img.shields.io/badge/Proto.io-161637?style=for-the-badge&logo=proto.io&logoColor=00e5ff)"
-    },
-    {
-      label: "SKETCH",
-      url: "![Sketch](https://img.shields.io/badge/Sketch-FFB387?style=for-the-badge&logo=sketch&logoColor=black)"
-    },
-    {
-      label: "STORYBOOK",
-      url: "![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)"
-    }
   ],
   ml: [
     {

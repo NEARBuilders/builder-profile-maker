@@ -2,13 +2,15 @@
 import { providers } from "near-api-js";
 
 // wallet selector
-import { distinctUntilChanged, map } from "rxjs";
-import "@near-wallet-selector/modal-ui/styles.css";
+import { setupBitteWallet } from "@near-wallet-selector/bitte-wallet";
 import { setupWalletSelector } from "@near-wallet-selector/core";
 import { setupHereWallet } from "@near-wallet-selector/here-wallet";
 import { setupMeteorWallet } from "@near-wallet-selector/meteor-wallet";
-import { setupMyNearWallet } from "@near-wallet-selector/my-near-wallet";
 import { setupModal } from "@near-wallet-selector/modal-ui";
+import "@near-wallet-selector/modal-ui/styles.css";
+import { setupMyNearWallet } from "@near-wallet-selector/my-near-wallet";
+import { setupSender } from "@near-wallet-selector/sender";
+import { distinctUntilChanged, map } from "rxjs";
 
 const THIRTY_TGAS = "30000000000000";
 const NO_DEPOSIT = "0";
@@ -43,7 +45,22 @@ export class Wallet {
     this.selector = setupWalletSelector({
       // @ts-expect-error - "property does not exist", ya whatever
       network: this.networkId,
-      modules: [setupMyNearWallet(), setupHereWallet(), setupMeteorWallet()]
+      modules: [
+        // @ts-expect-error - "property does not exist", ya whatever
+        setupBitteWallet({
+          walletUrl: NETWORK_ID as string === "mainnet" ? 'https://wallet.bitte.ai' : "https://testnet.wallet.bitte.ai",
+          callbackUrl: window.location.href,
+          // contractId: "yourcontract.near", // add if you want limited access keys to be generated
+          deprecated: false,
+        }),
+        // @ts-expect-error - "property does not exist", ya whatever
+        setupMyNearWallet(),
+        setupHereWallet(),
+        // @ts-expect-error - "property does not exist", ya whatever
+        setupMeteorWallet(),
+        // @ts-expect-error - "property does not exist", ya whatever
+        setupSender()
+      ]
     });
 
     // @ts-expect-error - "property does not exist", ya whatever

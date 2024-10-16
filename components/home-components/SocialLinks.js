@@ -3,7 +3,7 @@ import AnchorWithSVG from "../elements/anchor/AnchorWithSVG";
 
 export default function SocialLinks() {
   return (
-    <div className="my-8 flex flex-col-reverse text-green-300 md:flex-row">
+    <div className="my-8 flex flex-col-reverse text-orange-300 md:flex-row">
       <div className="my-6 flex w-full flex-col justify-center md:my-0 md:w-6/12 md:items-end">
         <p className="text-3xl font-medium sm:text-4xl md:text-5xl">
           Our Social Links

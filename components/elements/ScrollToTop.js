@@ -14,7 +14,7 @@ export default function ScrollToTop() {
   return (
     <div className="flex w-full justify-center md:justify-end">
       <button
-        className="rounded-full bg-green-300 p-4 text-zinc-800 brightness-75 transition-all duration-200 ease-in-out hover:brightness-90 active:scale-95"
+        className="rounded-full bg-orange-300 p-4 text-zinc-800 brightness-75 transition-all duration-200 ease-in-out hover:brightness-90 active:scale-95"
         onClick={() => topFunction()}
       >
         <ArrowUpIcon className="h-6 w-6" />

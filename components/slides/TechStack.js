@@ -88,7 +88,7 @@ ${profileMaker.data.tech
             ◄ Go Back
           </button>
           <p className="my-8 mt-20 w-full text-center text-2xl sm:my-10 sm:text-3xl">
-            Add Tech that you use
+            Add tech that you use
           </p>
           {/* Search Box */}
           <div className="relative">
@@ -97,7 +97,7 @@ ${profileMaker.data.tech
               name=""
               id=""
               value={searchStr}
-              className="max-w-[92vw] rounded-full bg-transparent p-4 px-8 pr-16 text-green-300 outline-none ring-2 ring-green-200 sm:max-w-full"
+              className="max-w-[92vw] rounded-full bg-transparent p-4 px-8 pr-16 text-orange-300 outline-none ring-2 ring-orange-200 sm:max-w-full"
               placeholder="Search tech"
               onChange={(e) => setSearchStr(e.target.value)}
             />
@@ -140,7 +140,7 @@ ${profileMaker.data.tech
               </div>
             </div>
           </div>
-          <div className="flex w-full flex-col items-center justify-center text-green-100">
+          <div className="flex w-full flex-col items-center justify-center text-orange-100">
             {/* Hosting/SaaS */}
             {/* <TechBadgesWrapper label="Hosting/SaaS" data={techData.hosting} /> */}
             {/* FRAMEWORKS, PLATFORMS & LIBRARIES */}
@@ -157,15 +157,9 @@ ${profileMaker.data.tech
             />
             {/* DESIGN */}
             <TechBadgesWrapper label="DESIGN" data={techData.design} />
-            {/* ML/DL */}
-            <TechBadgesWrapper label="ML/DL" data={techData.ml} />
-            {/* CI CD VCS */}
-            <TechBadgesWrapper label="CI/CD VCS" data={techData.cicdvcs} />
-            {/* OTHER */}
-            <TechBadgesWrapper label="OTHER" data={techData.others} />
           </div>
           {/* Select Badge Type (with preview) */}
-          <div className="mb-6 flex flex-row flex-wrap items-center justify-center rounded-md border border-green-300/50 p-2 px-4">
+          <div className="mb-6 flex flex-row flex-wrap items-center justify-center rounded-md border border-orange-300/50 p-2 px-4">
             Theme:
             <select
               id="badgestyle"
@@ -204,7 +198,6 @@ ${profileMaker.data.tech
           </div>
           <NextButton onClick={() => onNext()} />
           <Pagination val={4} />
-          {/* <FeedbackButton /> */}
         </div>
       )}
     </>

@@ -20,7 +20,6 @@
   - [Installing dependencies](#installing-dependencies)
   - [Running the app](#running-the-app)
   - [Building for production](#building-for-production)
-  - [Running tests](#running-tests)
 - [Contributing](#contributing)
 
 </details>
@@ -56,7 +55,7 @@ If you're interested in contributing to this project, please read the [contribut
 <div align="right">
 <a href="https://nearbuilders.org" target="_blank">
 <img
-  src="https://builders.mypinata.cloud/ipfs/QmWt1Nm47rypXFEamgeuadkvZendaUvAkcgJ3vtYf1rBFj"
+  src="https://ipfs.near.social/ipfs/bafkreiavh7rnvf4zzb5rjohul7xwrlgz4y6ysdtmdsvpjeqpjtmuvgal7a"
   alt="Near Builders"
   height="40"
 />

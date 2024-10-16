@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
 import TextInputWithIcon from "../elements/textinput/TextInputWithIcon";
 import TechStack from "./TechStack";
-import { useProfileMaker } from "../../contexts/profile-maker";
 
 export default function Socials({ back }) {
   const [isVisible, setIsVisible] = useState(false);
-  const profileMaker = useProfileMaker();
   function onNext() {
     socials = "";
     if (document.getElementById("linkedin").value != "") {

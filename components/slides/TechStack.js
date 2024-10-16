@@ -14,12 +14,13 @@ import { githubstats } from "./GitHubCards";
 export default function TechStack({ back }) {
   const [isVisible, setIsVisible] = useState(false);
   const profileMaker = useProfileMaker();
-  const [BadgeStyle, setBadgeStyle] = useState(profileMaker.data.badge_theme);
+  const [badgeStyle, setBadgeStyle] = useState(profileMaker.data.badge_theme);
   const [techData, setTechData] = useState(data);
   const [searchStr, setSearchStr] = useState("");
+  
   useEffect(() => {
-    profileMaker.data.badge_theme = BadgeStyle;
-  }, [BadgeStyle]);
+    profileMaker.data.badge_theme = badgeStyle;
+  }, [badgeStyle]);
 
   // Seaching whenever searchStr is changed
   useEffect(() => {
@@ -65,12 +66,13 @@ ${socials}
 # 💻 Tech Stack:
 ${profileMaker.data.tech
   .join(" ")
-  .replaceAll("for-the-badge", profileMaker.data.badge_theme)}
+  .replaceAll(badgeStyle, profileMaker.data.badge_theme)}
 `;
     }
     finaldata = finaldata + githubstats;
     finaldata = `${finaldata}
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->`;
+`;
+// <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
     profileMaker.data.finalData = finaldata;
   }
 
@@ -185,13 +187,9 @@ ${profileMaker.data.tech
               <option value="plastic" className="bg-zinc-900">
                 Plastic
               </option>
-              {/* Social style is not enabled as it is not compatible with all badges */}
-              {/* <option value="social" className="bg-zinc-900">
-                Social
-              </option> */}
             </select>
             <img
-              src={`https://img.shields.io/badge/Preview-1ED760?style=${BadgeStyle}&logo=spotify&logoColor=white`}
+              src={`https://img.shields.io/badge/Preview-1ED760?style=${badgeStyle}&logo=spotify&logoColor=white`}
               alt=""
               className="ml-4 w-max max-w-xs"
             />

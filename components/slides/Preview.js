@@ -125,23 +125,9 @@ export default function Preview({ back }) {
         ◄ Go Back
       </button>
       <p className="my-8 mt-20 w-full text-center text-3xl">
-        Your Awesome Profile is ready !
+        Your Builder Profile is ready !
       </p>
       <div className="mb-10 flex flex-col md:flex-row">
-        <ButtonWithSVG
-          title="Copy Code"
-          onClick={() => onCopy()}
-          d={
-            "M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
-          }
-        />
-        <ButtonWithSVG
-          title="Download Markdown File"
-          onClick={() => onDownload()}
-          d={
-            "M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-          }
-        />
         <ButtonWithSVG
           title="Create New"
           onClick={() => reloadTab()}
@@ -176,20 +162,11 @@ export default function Preview({ back }) {
         id="content"
         className="w-full rounded-lg bg-zinc-800 p-3 py-6 text-zinc-100 shadow-xl shadow-orange-200/20 ring-1 ring-orange-200 md:w-8/12"
       ></div>
-      <p className="flex flex-wrap pt-12 font-semibold text-gray-400">
-        What to Do Next ? :&nbsp;
-        <p className="font-medium">
-          Copy this Code and Paste it into your GitHub ReadMe file.
-        </p>{" "}
-      </p>
       <p className="flex h-full flex-col items-center pt-5 text-center text-xl lg:pt-10">
         Hey👋, Can you help us to grow by sharing? <br />
       </p>
-      <pre className="text-white">
-        {JSON.stringify(saveToNearSocial(), null, 2)}
-      </pre>
-      {copiedAlertVisible && <ToastSuccess title="Copied Successfully !" />}
-      {downloadAlertVisible && <ToastSuccess title="Download Started !" />}
+      {copiedAlertVisible && <ToastSuccess title="Copied Successfully!" />}
+      {downloadAlertVisible && <ToastSuccess title="Download Started!" />}
     </div>
   );
 }

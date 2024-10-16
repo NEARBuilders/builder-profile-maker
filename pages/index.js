@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { CrispBanner } from "../components/crisp";
 import Footer from "../components/elements/Footer";
-import NavBar from "../components/NavBar";
 import HomePage from "../components/slides/HomePage";
 
 export default function Home() {

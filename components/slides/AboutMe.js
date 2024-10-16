@@ -13,10 +13,10 @@ export default function AboutMe({ back }) {
   const [aboutme, setAboutme] = useState(profileMaker.data.aboutme);
   const [name, setName] = useState(profileMaker.data.name);
   const [profileImage, setProfileImage] = useState(
-    profileMaker.data.profileImage
+    profileMaker.data.profileImage.url
   );
   const [backgroundImage, setBackgroundImage] = useState(
-    profileMaker.data.backgroundImage
+    profileMaker.data.backgroundImage.url
   );
   const textareaPlaceholder = `🔭 I’m currently working on
 👯 I’m looking to collaborate on
@@ -93,7 +93,7 @@ export default function AboutMe({ back }) {
                     </label>
                     {profileImage ? (
                       <img
-                        src={profileImage}
+                        src={profileImage.url}
                         alt="Profile"
                         className="h-full w-full rounded-md object-cover"
                       />
@@ -120,7 +120,7 @@ export default function AboutMe({ back }) {
                     </label>
                     {backgroundImage ? (
                       <img
-                        src={backgroundImage}
+                        src={backgroundImage.url}
                         alt="Background"
                         className="h-full w-full rounded-md object-cover"
                       />

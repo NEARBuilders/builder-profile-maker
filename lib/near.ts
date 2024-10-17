@@ -223,4 +223,29 @@ export class Wallet {
     const transaction = await provider.txStatus(txhash, "unnused");
     return providers.getTransactionLastResult(transaction);
   };
+
+  /**
+    * Converts wallet selector account to near-api-js Account object
+    * @returns {Promise<Account>} - the resulting Account object
+  */
+  getAccount = async () => {
+    // @ts-expect-error - "property does not exist", ya whatever
+    const walletSelector = await this.selector;
+    //const { network } = walletSelector.options;
+    const accounts = walletSelector.store.getState().accounts;
+    if (!accounts.length) throw new Error("No signed-in accounts found");
+
+    return accounts[0];
+  };
+
+  signAndSendTransaction = async ({ contractId, actions }) => {
+    // Sign a transaction with the "FunctionCall" action
+    // @ts-expect-error whatever
+    const selectedWallet = await (await this.selector).wallet();
+    const outcome = await selectedWallet.signAndSendTransaction({
+      receiverId: contractId,
+      actions: actions,
+    });
+    return providers.getTransactionLastResult(outcome);
+  };
 }

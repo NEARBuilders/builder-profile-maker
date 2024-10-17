@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { db } from "../../config/firebase";
+import React, { useEffect } from "react";
 import { useProfileMaker } from "../../contexts/profile-maker";
 import { useWallet } from "../../contexts/wallet";
+import { setProfile } from "../../lib/social";
 import ButtonWithSVG from "../elements/buttons/ButtonWithSVG";
-import ToastSuccess from "../elements/toaster/ToastSuccess";
 
 export default function Preview({ back }) {
-  const [copiedAlertVisible, setCopiedAlertVisible] = useState(false);
-  const [downloadAlertVisible, setDownloadAlertVisible] = useState(false);
   const profileMaker = useProfileMaker();
-  const { signIn, signOut, signedAccountId } = useWallet();
+  const { signIn, signOut, wallet, signedAccountId } = useWallet();
+
   var md = require("markdown-it")({
     html: true,
     linkify: true,
@@ -22,10 +20,6 @@ export default function Preview({ back }) {
   });
 
   useEffect(() => {
-    db.collection(profileMaker.data.username).add({
-      date: Date(),
-      data: profileMaker.data.finalData
-    });
     setTimeout(() => {
       document.getElementById("content").innerHTML = md.render(
         profileMaker.data.finalData
@@ -43,43 +37,6 @@ export default function Preview({ back }) {
     }, 300);
   }, []);
 
-  function onCopy() {
-    navigator.clipboard.writeText(profileMaker.data.finalData);
-    // Alert for Copied
-    copied();
-  }
-  function onDownload() {
-    const element = document.createElement("a");
-    const file = new Blob([profileMaker.data.finalData], {
-      type: "text/plain"
-    });
-    element.href = URL.createObjectURL(file);
-    element.download = "ReadMe.md";
-    document.body.appendChild(element); // Required for this to work in FireFox
-    element.click();
-    // Alert for Downloaded
-    downloaded();
-  }
-  function reloadTab() {
-    location.reload();
-  }
-  function copied() {
-    if (copiedAlertVisible !== true) {
-      setCopiedAlertVisible(true);
-      setTimeout(() => {
-        setCopiedAlertVisible(false);
-      }, 3000);
-    }
-  }
-  function downloaded() {
-    if (downloadAlertVisible !== true) {
-      setDownloadAlertVisible(true);
-      setTimeout(() => {
-        setDownloadAlertVisible(false);
-      }, 3000);
-    }
-  }
-
   function saveToNearSocial() {
     const data = profileMaker.data;
     console.log(data);
@@ -94,24 +51,15 @@ export default function Preview({ back }) {
         url: data.backgroundImage
       },
       linktree: {
-        behance: data.socials.behance,
-        discord: data.socials.discord,
-        facebook: data.socials.facebook,
         github: data.username,
-        instagram: data.socials.instagram,
+        telegram: data.telegram,
         linkedin: data.socials.linkedin,
-        mastodon: data.socials.mastodon,
-        medium: data.socials.medium,
-        pinterest: data.socials.pinterest,
-        quora: data.socials.quora,
-        reddit: data.socials.reddit,
-        sof: data.socials.sof,
-        tiktok: data.socials.tiktok,
-        twitch: data.socials.twitch,
         twitter: data.socials.x,
-        youtube: data.socials.youtube
+        website: data.socials.website
       }
     };
+
+    setProfile(wallet, signedAccountId, profileData);
 
     return profileData;
   }
@@ -125,7 +73,7 @@ export default function Preview({ back }) {
         ◄ Go Back
       </button>
       <p className="my-8 mt-20 w-full text-center text-3xl">
-        Your Builder Profile is ready !
+        Your Builder Profile is ready!
       </p>
       <div className="mb-10 flex flex-col md:flex-row">
         <ButtonWithSVG
@@ -138,7 +86,7 @@ export default function Preview({ back }) {
         {signedAccountId ? (
           <ButtonWithSVG
             title="Save to NEAR Social Profile"
-            onClick={() => signOut()}
+            onClick={() => saveToNearSocial()}
             d={
               "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
             }
@@ -165,8 +113,6 @@ export default function Preview({ back }) {
       <p className="flex h-full flex-col items-center pt-5 text-center text-xl lg:pt-10">
         Hey👋, Can you help us to grow by sharing? <br />
       </p>
-      {copiedAlertVisible && <ToastSuccess title="Copied Successfully!" />}
-      {downloadAlertVisible && <ToastSuccess title="Download Started!" />}
     </div>
   );
 }

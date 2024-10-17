@@ -13,10 +13,10 @@ export default function AboutMe({ back }) {
   const [aboutme, setAboutme] = useState(profileMaker.data.aboutme);
   const [name, setName] = useState(profileMaker.data.name);
   const [profileImage, setProfileImage] = useState(
-    profileMaker.data.profileImage.url
+    profileMaker.data.profileImage
   );
   const [backgroundImage, setBackgroundImage] = useState(
-    profileMaker.data.backgroundImage.url
+    profileMaker.data.backgroundImage
   );
   const textareaPlaceholder = `🔭 I’m currently working on
 👯 I’m looking to collaborate on
@@ -29,13 +29,13 @@ export default function AboutMe({ back }) {
     if (
       aboutme != `` &&
       name != `` &&
-      profileImage.url != `` &&
-      backgroundImage.url != ``
+      profileImage != `` &&
+      backgroundImage != ``
     ) {
       profileMaker.data.aboutme = aboutme;
       profileMaker.data.name = name;
-      profileMaker.data.profileImage = profileImage.url;
-      profileMaker.data.backgroundImage = backgroundImage.url;
+      profileMaker.data.profileImage = profileImage?.url;
+      profileMaker.data.backgroundImage = backgroundImage?.url;
     }
     setIsVisible(true);
   }

@@ -90,7 +90,7 @@ ${profileMaker.data.tech
             ◄ Go Back
           </button>
 
-          <p className="my-8 mt-28 w-full text-center text-2xl sm:my-10 sm:text-3xl md:mt-20">
+          <p className="my-8 mt-28 w-full text-center text-2xl md:my-10 md:text-3xl md:mt-20">
             Add tech that you use
           </p>
           {/* Search Box */}

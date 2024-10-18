@@ -73,9 +73,7 @@ export default function Preview({ back }) {
         ◄ Go Back
       </button>
       <div className="my-8 mt-28 flex w-full flex-col items-center gap-3 text-center md:mt-20">
-        <p className="md text-2xl md:text-3xl">
-          Your Builder Profile is ready!
-        </p>
+        <p className="text-2xl md:text-3xl">Your Builder Profile is ready!</p>
         <p className="text text-sm">
           Let&apos;s deploy it, do you have an account?
         </p>

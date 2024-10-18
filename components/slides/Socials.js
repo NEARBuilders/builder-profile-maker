@@ -43,14 +43,14 @@ export default function Socials({ back }) {
       {isVisible ? (
         <TechStack back={() => setIsVisible(false)} />
       ) : (
-        <div className="fade-on-appear mt-10 flex flex-col items-center">
+        <div className="fade-on-appear flex flex-col items-center">
           <button
             className="absolute left-0 m-5 opacity-80 outline-none transition-all ease-in-out hover:opacity-100 md:m-10"
             onClick={back}
           >
             ◄ Go Back
           </button>
-          <p className="mt-28 w-full text-center text-3xl md:mt-20">
+          <p className="mt-28 w-full text-center text-2xl md:text-3xl md:mt-20">
             Add Your Social Links
           </p>
           <div className="my-10 flex w-full flex-wrap justify-between md:w-8/12">

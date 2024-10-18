@@ -16,7 +16,7 @@ export default async function handler(req, res) {
           {
             role: "system",
             content:
-              "You are a intelligent assistant which only responds a 'Profile About Me' section from given user prompt. Do not send the response in markdown."
+              "You are a intelligent assistant which only responds a 'Profile About Me' section from given user prompt. Do not send the response in markdown. Only send the actual content and 'Profile About Me: ' before it."
           },
           {
             role: "user",

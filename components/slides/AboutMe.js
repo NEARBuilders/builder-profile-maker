@@ -66,12 +66,12 @@ export default function AboutMe({ back }) {
       ) : (
         <div className="fade-on-appear flex flex-col items-center">
           <button
-            className="absolute left-0 m-10 opacity-80 outline-none transition-all ease-in-out hover:opacity-100"
+            className="absolute left-0 m-5 opacity-80 outline-none transition-all ease-in-out hover:opacity-100 md:m-10"
             onClick={back}
           >
             ◄ Go Back
           </button>
-          <p className="my-6 mt-20 w-full text-center text-3xl md:my-10">
+          <p className="my-6 mt-20 w-full text-center text-2xl md:my-10 md:text-3xl">
             Add a small introduction
           </p>
           <div className="flex w-full flex-col md:flex-row">

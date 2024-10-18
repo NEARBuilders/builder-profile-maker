@@ -56,24 +56,29 @@ export default function HomePage() {
                 Profile Builder
               </p>
               {/* Text Input */}
-              <div className="2xl:my10 mt-8 flex flex-col items-center sm:flex-row md:my-8">
+              <div>
                 <form className="w-full" onSubmit={onNext}>
-                  <input
-                    type="text"
-                    value={input}
-                    required={true}
-                    onChange={(e) => setInput(e.target.value)}
-                    autoFocus={true}
-                    className="focus:border-border-[#ECA227] inline w-full border-b-2 border-[#ECA227] bg-transparent text-xl outline-none focus:border-b-4 sm:w-11/12 sm:text-3xl md:w-10/12 md:text-xl lg:w-8/12 lg:text-2xl 2xl:text-3xl"
-                    placeholder="Enter Your GitHub Username"
-                  />
-                  <button type="Submit">
-                    <RIGHT_ARROW_SVG />
-                  </button>
+                  <div className="mt-8 flex flex-col items-center sm:flex-row md:my-8 2xl:my-10">
+                    <input
+                      type="text"
+                      value={input}
+                      required={true}
+                      onChange={(e) => setInput(e.target.value)}
+                      autoFocus={true}
+                      className="focus:border-border-[#ECA227] inline w-full border-b-2 border-[#ECA227] bg-transparent p-2 py-3 text-lg outline-none transition-all duration-75 focus:rounded-full focus:border-2 focus:px-4 sm:w-11/12 sm:text-3xl md:w-10/12 md:text-xl lg:w-8/12 lg:text-xl 2xl:text-3xl"
+                      placeholder="Enter Your GitHub Username"
+                    />
+                    <button
+                      type="Submit"
+                      className="mx-2 mt-5 rounded-full border-2 border-white px-1 py-3 text-lg md:mt-0"
+                    >
+                      <RIGHT_ARROW_SVG className="m-0" />
+                    </button>
+                  </div>
                 </form>
               </div>
             </div>
-            <div className="mt-16 flex w-full justify-center md:mt-0 md:w-6/12">
+            <div className="mt-20 flex w-full justify-center md:mt-0 md:w-6/12">
               <img
                 src="/hat_logo.png"
                 alt=""

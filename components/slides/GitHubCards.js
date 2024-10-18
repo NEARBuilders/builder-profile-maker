@@ -37,12 +37,12 @@ export default function GitHubStats({ back }) {
       ) : (
         <div className="fade-on-appear flex flex-col items-center">
           <button
-            className="absolute left-0 m-10 opacity-80 outline-none transition-all ease-in-out hover:opacity-100"
+            className="absolute left-0 m-5 opacity-80 outline-none transition-all ease-in-out hover:opacity-100 md:m-10"
             onClick={back}
           >
             ◄ Go Back
           </button>
-          <p className="my-10 mt-20 w-full text-center text-3xl">
+          <p className="my-10 mt-28 w-full text-center text-2xl sm:mt-20 md:text-3xl">
             Flex your GitHub Stats
           </p>
           {/* Options */}

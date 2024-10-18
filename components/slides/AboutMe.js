@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useObserver } from "mobx-react";
 import React, { useState } from "react";
 import { useProfileMaker } from "../../contexts/profile-maker";
@@ -18,12 +19,31 @@ export default function AboutMe({ back }) {
   const [backgroundImage, setBackgroundImage] = useState(
     profileMaker.data.backgroundImage
   );
-  const textareaPlaceholder = `🔭 I’m currently working on
-👯 I’m looking to collaborate on
-🤝 I’m looking for help with
-🌱 I’m currently learning
+
+  const [isGenerating, setIsGenerating] = useState(false);
+
+  const textareaPlaceholder = `🔭 I'm currently working on
+👯 I'm looking to collaborate on
+🤝 I'm looking for help with
+🌱 I'm currently learning
 💬 Ask me about
 ⚡ Fun fact`;
+
+  async function generateProfile() {
+    setIsGenerating(true);
+    const response = await fetch("/api/openai", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        prompt: `${aboutme} ${name ? `and my name is ${name}` : ""}`
+      })
+    });
+    const data = await response.json();
+    setIsGenerating(false);
+    setAboutme(data);
+  }
 
   function onNext() {
     if (
@@ -146,15 +166,24 @@ export default function AboutMe({ back }) {
                   </label>
                   <textarea
                     id="aboutMe"
-                    className="h-48 w-full resize-none rounded-md border-2 border-orange-500 bg-transparent p-2 outline-none focus:border-white"
+                    className="h-48 w-full resize-none rounded-md border-2 border-orange-500 bg-transparent p-2 outline-none focus:border-white disabled:cursor-not-allowed disabled:opacity-50"
                     placeholder={textareaPlaceholder}
                     value={aboutme}
                     onChange={(e) => setAboutme(e.target.value)}
+                    disabled={isGenerating}
                   ></textarea>
                 </div>
-                <div className="flex">
+                <div className="flex items-center gap-2">
+                  <button
+                    disabled={aboutme.length === 0 || isGenerating}
+                    onClick={() => generateProfile()}
+                    className="group relative inline-block w-max select-none rounded-lg border-2 border-orange-500 px-6 py-3 font-bold uppercase tracking-widest text-orange-100 hover:border-orange-200 disabled:cursor-not-allowed"
+                  >
+                    Generate using ai
+                  </button>
                   <NextButton onClick={() => onNext()} />
                 </div>
+                <small>Cannot generate without giving prompt</small>
               </div>
             </div>
           </div>

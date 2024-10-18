@@ -5,7 +5,7 @@ export default function TextInputWithIcon({
   id,
   children,
   placeholder,
-  viewBox = "-0.5 0 20 16"
+  viewBox = "-0.5 0 24 21"
 }) {
   const profileMaker = useProfileMaker();
   const [input, setInput] = useState(profileMaker.data.socials[id]);

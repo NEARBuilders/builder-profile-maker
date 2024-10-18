@@ -32,7 +32,7 @@ export default function Socials({ back }) {
     if (document.getElementById("website").value != "") {
       socials =
         socials +
-        `[![Website](https://img.shields.io/badge/Website-%239146FF.svg?logo=Telegram&logoColor=white)](https://tele.tv/${
+        `[![Website](https://img.shields.io/badge/Website-%239146FF.svg?logo=Website&logoColor=white)](https://tele.tv/${
           document.getElementById("website").value
         }) `;
     }
@@ -45,12 +45,12 @@ export default function Socials({ back }) {
       ) : (
         <div className="fade-on-appear mt-10 flex flex-col items-center">
           <button
-            className="absolute left-0 m-10 opacity-80 outline-none transition-all ease-in-out hover:opacity-100"
+            className="absolute left-0 m-5 opacity-80 outline-none transition-all ease-in-out hover:opacity-100 md:m-10"
             onClick={back}
           >
             ◄ Go Back
           </button>
-          <p className="mt-20 w-full text-center text-3xl">
+          <p className="mt-28 w-full text-center text-3xl md:mt-20">
             Add Your Social Links
           </p>
           <div className="my-10 flex w-full flex-wrap justify-between md:w-8/12">
@@ -65,7 +65,7 @@ export default function Socials({ back }) {
               <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
             </TextInputWithIcon>
             <TextInputWithIcon id="website" placeholder="Website">
-              <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+              <path d="M10,17.55,8.23,19.27a2.47,2.47,0,0,1-3.5-3.5l4.54-4.55a2.46,2.46,0,0,1,3.39-.09l.12.1a1,1,0,0,0,1.4-1.43A2.75,2.75,0,0,0,14,9.59a4.46,4.46,0,0,0-6.09.22L3.31,14.36a4.48,4.48,0,0,0,6.33,6.33L11.37,19A1,1,0,0,0,10,17.55ZM20.69,3.31a4.49,4.49,0,0,0-6.33,0L12.63,5A1,1,0,0,0,14,6.45l1.73-1.72a2.47,2.47,0,0,1,3.5,3.5l-4.54,4.55a2.46,2.46,0,0,1-3.39.09l-.12-.1a1,1,0,0,0-1.4,1.43,2.75,2.75,0,0,0,.23.21,4.47,4.47,0,0,0,6.09-.22l4.55-4.55A4.49,4.49,0,0,0,20.69,3.31Z" />
             </TextInputWithIcon>
           </div>
           <NextButton onClick={() => onNext()} />

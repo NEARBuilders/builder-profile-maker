@@ -70,7 +70,7 @@ export const RIGHT_ARROW_SVG = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="mt-4 h-8 w-12 cursor-pointer transition-all duration-200 ease-linear hover:ml-1 sm:mt-0"
+      className="h-8 w-12 cursor-pointer transition-all duration-200 ease-linear hover:ml-1 sm:mt-0"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"

@@ -17,7 +17,7 @@ export default function TechStack({ back }) {
   const [badgeStyle, setBadgeStyle] = useState(profileMaker.data.badge_theme);
   const [techData, setTechData] = useState(data);
   const [searchStr, setSearchStr] = useState("");
-  
+
   useEffect(() => {
     profileMaker.data.badge_theme = badgeStyle;
   }, [badgeStyle]);
@@ -72,7 +72,7 @@ ${profileMaker.data.tech
     finaldata = finaldata + githubstats;
     finaldata = `${finaldata}
 `;
-// <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+    // <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
     profileMaker.data.finalData = finaldata;
   }
 
@@ -84,12 +84,13 @@ ${profileMaker.data.tech
         // <Donate back={() => setIsVisible(false)} />
         <div className="fade-on-appear flex flex-col items-center">
           <button
-            className="absolute left-0 m-10 opacity-80 outline-none transition-all ease-in-out hover:opacity-100"
+            className="absolute left-0 m-5 opacity-80 outline-none transition-all ease-in-out hover:opacity-100 md:m-10"
             onClick={back}
           >
             ◄ Go Back
           </button>
-          <p className="my-8 mt-20 w-full text-center text-2xl sm:my-10 sm:text-3xl">
+
+          <p className="my-8 mt-28 w-full text-center text-2xl sm:my-10 sm:text-3xl md:mt-20">
             Add tech that you use
           </p>
           {/* Search Box */}
@@ -99,7 +100,7 @@ ${profileMaker.data.tech
               name=""
               id=""
               value={searchStr}
-              className="max-w-[92vw] rounded-full bg-transparent p-4 px-8 pr-16 text-orange-300 outline-none ring-2 ring-orange-200 sm:max-w-full"
+              className="duration-400 max-w-[92vw] rounded-full bg-transparent p-3 px-6 pr-16 text-orange-300 outline-none ring-2 ring-orange-200 transition-all focus:ring-orange-500 sm:max-w-full md:p-4 md:px-8"
               placeholder="Search tech"
               onChange={(e) => setSearchStr(e.target.value)}
             />

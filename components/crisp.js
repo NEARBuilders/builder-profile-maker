@@ -142,20 +142,26 @@ export function CrispBanner() {
     transition: "all 0.2s ease-in-out",
     letterSpacing: "0.05em",
     fontWeight: 500,
+    lineHeight: "1.5",
     outline: "none",
     overflow: "hidden",
     display: "flex",
     height: "40px",
     justifyContent: "center",
     alignItems: "center",
-    width: "100%"
+    width: "100%",
+    textAlign: "center"
   };
 
   return (
     <>
       <div style={bannerWrapperAnimation}>
-        <div style={bannerAnimation}>
-          <a style={buttonStyles} href="https://redactedbangkok.ai/" className="text-xs sm:text-base">
+        <div style={bannerAnimation} className="px-2 sm:p-0">
+          <a
+            style={buttonStyles}
+            href="https://redactedbangkok.ai/"
+            className="text-xs sm:text-base"
+          >
             Sign up for the [REDACTED] Hackathon and join us at Builder Village
           </a>
         </div>

@@ -65,7 +65,7 @@ export default function HomePage() {
                       required={true}
                       onChange={(e) => setInput(e.target.value)}
                       autoFocus={true}
-                      className="focus:border-border-[#ECA227] inline w-full border-b-2 border-[#ECA227] bg-transparent p-2 py-3 text-lg outline-none transition-all duration-75 focus:rounded-full focus:border-2 focus:px-4 sm:w-11/12 sm:text-3xl md:w-10/12 md:text-xl lg:w-8/12 lg:text-xl 2xl:text-3xl"
+                      className="inline w-full rounded-full border-2 border-orange-400 bg-transparent p-2 px-4 py-3 text-lg outline-none transition-all duration-75 focus:border-orange-500 sm:w-11/12 sm:text-3xl md:w-10/12 md:text-xl lg:w-8/12 lg:text-xl 2xl:text-3xl"
                       placeholder="Enter Your GitHub Username"
                     />
                     <button

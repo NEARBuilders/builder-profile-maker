@@ -7,6 +7,7 @@ import Pagination from "../elements/Pagination";
 import GitHubStats from "./GitHubCards";
 
 import { UploadDropzone } from "../../utils/uploadthing";
+import Header from "../elements/header";
 
 export default function AboutMe({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -65,7 +66,7 @@ export default function AboutMe({ back }) {
         <GitHubStats back={() => setIsVisible(false)} />
       ) : (
         <div className="fade-on-appear flex flex-col items-center">
-          <button
+          {/* <button
             className="absolute left-0 m-5 opacity-80 outline-none transition-all ease-in-out hover:opacity-100 md:m-10"
             onClick={back}
           >
@@ -74,6 +75,10 @@ export default function AboutMe({ back }) {
           <p className="my-6 mt-20 w-full text-center text-2xl md:my-10 md:text-3xl">
             Add a small introduction
           </p>
+           */}
+          <Header back={back}>
+            <p className="text-2xl md:text-3xl">Add a small introduction</p>
+          </Header>
           <div className="flex w-full flex-col md:flex-row">
             <div className="mb-4 flex w-full items-center justify-center md:mb-0 md:w-6/12">
               <img

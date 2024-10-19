@@ -10,6 +10,7 @@ import TechBadgesWrapper from "../techstack/TechBadgesWrapper";
 import Preview from "./Preview";
 import { socials } from "./Socials";
 import { githubstats } from "./GitHubCards";
+import Header from "../elements/header";
 
 export default function TechStack({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -83,16 +84,9 @@ ${profileMaker.data.tech
       ) : (
         // <Donate back={() => setIsVisible(false)} />
         <div className="fade-on-appear flex flex-col items-center">
-          <button
-            className="absolute left-0 m-5 opacity-80 outline-none transition-all ease-in-out hover:opacity-100 md:m-10"
-            onClick={back}
-          >
-            ◄ Go Back
-          </button>
-
-          <p className="my-8 mt-28 w-full text-center text-2xl md:my-10 md:text-3xl md:mt-20">
-            Add tech that you use
-          </p>
+          <Header back={back}>
+            <p className="text-2xl md:text-3xl">Add tech that you use</p>
+          </Header>
           {/* Search Box */}
           <div className="relative">
             <input
@@ -143,7 +137,7 @@ ${profileMaker.data.tech
               </div>
             </div>
           </div>
-          <div className="flex w-full flex-col items-center justify-center text-orange-100">
+          <div className="flex w-full flex-col items-center justify-center text-white">
             {/* Hosting/SaaS */}
             {/* <TechBadgesWrapper label="Hosting/SaaS" data={techData.hosting} /> */}
             {/* FRAMEWORKS, PLATFORMS & LIBRARIES */}

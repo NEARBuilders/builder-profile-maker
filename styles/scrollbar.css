@@ -17,7 +17,7 @@
 /* default color, border color to match body bg and give some space*/
 ::-webkit-scrollbar-thumb {
   transform-style: preserve-3d;
-  background-color: rgba(187, 247, 208, 0.649);
+  background-color: #ffbe5a;
   border-radius: 50px;
   border-color: rgb(24 24 27);
   border-style: solid;

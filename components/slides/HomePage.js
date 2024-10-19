@@ -42,8 +42,8 @@ export default function HomePage() {
       {isVisible ? (
         <AboutMe back={() => setIsVisible(false)} />
       ) : (
-        <div className="container-screen-2xl scroll-smooth">
-          <div className="relative flex min-h-[90vh] w-full flex-col items-center py-16 md:flex-row md:py-28">
+        <div className="scroll-smooth">
+          <div className="relative flex w-full flex-col items-center py-16 md:min-h-[90vh] md:flex-row md:py-28">
             <div className="relative flex w-full flex-col gap-2 md:w-6/12">
               <div className="relative flex w-full items-center gap-1">
                 <img
@@ -52,7 +52,7 @@ export default function HomePage() {
                   className="mr-2 h-36 w-60"
                 />
               </div>
-              <p className="text-4xl md:text-7xl 2xl:text-8xl">
+              <p className="text-4xl sm:text-6xl md:text-7xl 2xl:text-8xl">
                 Profile Builder
               </p>
               {/* Text Input */}

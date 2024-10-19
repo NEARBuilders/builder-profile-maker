@@ -51,21 +51,25 @@ export default function GitHubStats({ back }) {
           </Header>
           {/* Options */}
           <div className="flex flex-wrap items-center justify-center">
-            Theme:
-            <select
-              id="theme"
-              value={profileMaker.data.stats.theme}
-              onChange={() => setTheme(document.getElementById("theme").value)}
-              className="bg-transparent px-2 py-1 outline-none"
-            >
-              {themes.map((item) => {
-                return (
-                  <option key={item} value={item} className="bg-zinc-900">
-                    {item}
-                  </option>
-                );
-              })}
-            </select>
+            <div className="m-2 rounded-sm px-4 text-base ring-2 ring-orange-300 transition-all duration-200 ease-in-out hover:ring-orange-200 md:m-0 md:ml-3">
+              Theme:
+              <select
+                id="theme"
+                value={profileMaker.data.stats.theme}
+                onChange={() =>
+                  setTheme(document.getElementById("theme").value)
+                }
+                className="cursor-pointer bg-transparent px-2 py-1 outline-none"
+              >
+                {themes.map((item) => {
+                  return (
+                    <option key={item} value={item} className="m-1 bg-zinc-900">
+                      {item}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
             <FilterButton
               chk={border}
               title="Border"

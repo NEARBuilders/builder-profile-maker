@@ -115,9 +115,9 @@ export default function Preview({ back }) {
         id="content"
         className="w-full rounded-lg bg-zinc-800 p-3 py-6 text-zinc-100 shadow-xl shadow-orange-200/20 ring-1 ring-orange-200 md:w-8/12"
       ></div>
-      <p className="flex h-full flex-col items-center pt-5 text-center text-xl lg:pt-10">
+      {/* <p className="flex h-full flex-col items-center pt-5 text-center text-xl lg:pt-10">
         Hey👋, Can you help us to grow by sharing? <br />
-      </p>
+      </p> */}
     </div>
   );
 }

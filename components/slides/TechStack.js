@@ -100,63 +100,8 @@ ${profileMaker.data.tech
             />
             <SearchIcon className="absolute right-4 top-1/2 w-8 -translate-y-1/2" />
           </div>
-          <div className="flex w-full flex-col md:flex-row">
-            <div
-              className={`w-full ${
-                searchStr ? "hidden" : "flex"
-              } items-center justify-center md:w-6/12`}
-            >
-              <img
-                src="/girlonpc.svg"
-                alt=""
-                className="pointer-events-none aspect-square select-none md:w-8/12"
-                draggable="false"
-              />
-            </div>
-            <div
-              className={`flex w-full flex-col ${
-                searchStr ? "md:w-full" : "md:w-6/12"
-              }`}
-            >
-              {/* NOT USING ANY DATA FILE TO POPULATE BADGES */}
-              <div className="flex h-full flex-col items-center">
-                {/* If nothing found in all searches - can be minified */}
-                {techData.lang.length === 0 &&
-                  techData.database.length === 0 &&
-                  techData.design.length === 0 &&
-                  techData.frameworks.length === 0 &&
-                  techData.hosting.length === 0 &&
-                  techData.ml.length === 0 &&
-                  techData.others.length === 0 &&
-                  techData.servers.length === 0 &&
-                  techData.cicdvcs.length === 0 &&
-                  nothingFound()}
-
-                {/* Languages */}
-                <TechBadgesWrapper label="LANGUAGES" data={techData.lang} />
-              </div>
-            </div>
-          </div>
-          <div className="flex w-full flex-col items-center justify-center text-white">
-            {/* Hosting/SaaS */}
-            {/* <TechBadgesWrapper label="Hosting/SaaS" data={techData.hosting} /> */}
-            {/* FRAMEWORKS, PLATFORMS & LIBRARIES */}
-            <TechBadgesWrapper
-              label="FRAMEWORKS, PLATFORMS & LIBRARIES"
-              data={techData.frameworks}
-            />
-            {/* SERVERS */}
-            <TechBadgesWrapper label="SERVERS" data={techData.servers} />
-            {/* DATABASES / ORM */}
-            <TechBadgesWrapper
-              label="DATABASES / ORM"
-              data={techData.database}
-            />
-            {/* DESIGN */}
-            <TechBadgesWrapper label="DESIGN" data={techData.design} />
-          </div>
           {/* Select Badge Type (with preview) */}
-          <div className="mb-6 flex flex-row flex-wrap items-center justify-center rounded-md border border-orange-300/50 p-2 px-4">
+          <div className="my-6 flex flex-row flex-wrap items-center justify-center rounded-md border border-orange-300/50 p-2 px-4">
             Theme:
             <select
               id="badgestyle"
@@ -189,6 +134,76 @@ ${profileMaker.data.tech
               className="ml-4 w-max max-w-xs"
             />
           </div>
+          <div className="flex w-full flex-col md:flex-row">
+            <div
+              className={`w-full ${
+                searchStr ? "hidden" : "flex"
+              } items-center justify-center md:w-6/12`}
+            >
+              <img
+                src="/girlonpc.svg"
+                alt=""
+                className="pointer-events-none aspect-square select-none md:w-8/12"
+                draggable="false"
+              />
+            </div>
+            <div
+              className={`flex w-full flex-col ${
+                searchStr ? "md:w-full" : "md:w-6/12"
+              }`}
+            >
+              {/* NOT USING ANY DATA FILE TO POPULATE BADGES */}
+              <div className="flex h-full flex-col items-center justify-center">
+                {/* If nothing found in all searches - can be minified */}
+                {techData.lang.length === 0 &&
+                  techData.database.length === 0 &&
+                  techData.design.length === 0 &&
+                  techData.frameworks.length === 0 &&
+                  techData.hosting.length === 0 &&
+                  techData.ml.length === 0 &&
+                  techData.others.length === 0 &&
+                  techData.servers.length === 0 &&
+                  techData.cicdvcs.length === 0 &&
+                  nothingFound()}
+
+                {/* Languages */}
+                <TechBadgesWrapper
+                  label="LANGUAGES"
+                  data={techData.lang}
+                  defaultVisibleCount={10}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="flex w-full flex-col items-center justify-center text-white">
+            {/* Hosting/SaaS */}
+            {/* <TechBadgesWrapper label="Hosting/SaaS" data={techData.hosting} /> */}
+            {/* FRAMEWORKS, PLATFORMS & LIBRARIES */}
+            <TechBadgesWrapper
+              label="FRAMEWORKS, PLATFORMS & LIBRARIES"
+              data={techData.frameworks}
+              defaultVisibleCount={15}
+            />
+            {/* SERVERS */}
+            <TechBadgesWrapper
+              label="SERVERS"
+              data={techData.servers}
+              defaultVisibleCount={15}
+            />
+            {/* DATABASES / ORM */}
+            <TechBadgesWrapper
+              label="DATABASES / ORM"
+              data={techData.database}
+              defaultVisibleCount={15}
+            />
+            {/* DESIGN */}
+            <TechBadgesWrapper
+              label="DESIGN"
+              data={techData.design}
+              defaultVisibleCount={15}
+            />
+          </div>
+
           <NextButton onClick={() => onNext()} />
           <Pagination val={4} />
         </div>

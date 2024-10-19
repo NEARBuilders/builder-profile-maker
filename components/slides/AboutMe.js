@@ -60,6 +60,7 @@ export default function AboutMe({ back }) {
     }
     setIsVisible(true);
   }
+
   return useObserver(() => (
     <>
       {isVisible ? (
@@ -116,23 +117,33 @@ export default function AboutMe({ back }) {
                     >
                       Profile Image
                     </label>
-                    {profileImage ? (
-                      <img
-                        src={profileImage.url}
-                        alt="Profile"
-                        className="h-full w-full rounded-md object-cover"
-                      />
-                    ) : (
-                      <div className="text-center">
-                        <UploadDropzone
-                          endpoint="imageUploader"
-                          onClientUploadComplete={(res) => {
-                            console.log("File: ", res);
-                            setProfileImage(res[0]);
-                          }}
+                    <div className="h-full w-full overflow-hidden rounded-md border-2 border-orange-500 hover:border-orange-200">
+                      {profileImage ? (
+                        <img
+                          src={profileImage.url}
+                          alt="Profile"
+                          className="h-full w-full rounded-md object-cover"
                         />
-                      </div>
-                    )}
+                      ) : (
+                        <div className="cursor-pointer text-center">
+                          <UploadDropzone
+                            endpoint="imageUploader"
+                            onClientUploadComplete={(res) => {
+                              console.log("File: ", res);
+                              setProfileImage(res[0]);
+                            }}
+                            appearance={{
+                              label: {
+                                color: "#ECA227"
+                              },
+                              button: {
+                                backgroundColor: "#ECA227"
+                              }
+                            }}
+                          />
+                        </div>
+                      )}
+                    </div>
                   </div>
 
                   {/* Background Image Upload */}
@@ -143,23 +154,33 @@ export default function AboutMe({ back }) {
                     >
                       Background Image
                     </label>
-                    {backgroundImage ? (
-                      <img
-                        src={backgroundImage.url}
-                        alt="Background"
-                        className="h-full w-full rounded-md object-cover"
-                      />
-                    ) : (
-                      <div className="text-center">
-                        <UploadDropzone
-                          endpoint="imageUploader"
-                          onClientUploadComplete={(res) => {
-                            console.log("Files: ", res);
-                            setBackgroundImage(res[0]);
-                          }}
+                    <div className="h-full w-full overflow-hidden rounded-md border-2 border-orange-500 hover:border-orange-200">
+                      {backgroundImage ? (
+                        <img
+                          src={backgroundImage.url}
+                          alt="Background"
+                          className="h-full w-full rounded-md object-cover"
                         />
-                      </div>
-                    )}
+                      ) : (
+                        <div className="cursor-pointer text-center">
+                          <UploadDropzone
+                            endpoint="imageUploader"
+                            onClientUploadComplete={(res) => {
+                              console.log("Files: ", res);
+                              setBackgroundImage(res[0]);
+                            }}
+                            appearance={{
+                              label: {
+                                color: "#ECA227"
+                              },
+                              button: {
+                                backgroundColor: "#ECA227"
+                              }
+                            }}
+                          />
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
                 <div className="space-y-2">
@@ -180,15 +201,38 @@ export default function AboutMe({ back }) {
                 </div>
                 <div className="flex items-center gap-2">
                   <button
+                    class="opacity-60 hover:opacity-80"
+                    title="Load Template"
+                    onClick={() => setAboutme(textareaPlaceholder)}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                      class="w-6 stroke-1"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                      ></path>
+                    </svg>
+                  </button>
+                  <button
                     disabled={aboutme.length === 0 || isGenerating}
                     onClick={() => generateProfile()}
-                    className="group relative inline-block w-max select-none rounded-lg border-2 border-orange-500 px-6 py-3 font-bold uppercase tracking-widest text-orange-100 hover:border-orange-200 disabled:cursor-not-allowed"
+                    className={`group relative inline-block w-max select-none rounded-lg border-2 border-orange-500 px-3 py-3 font-bold uppercase tracking-widest text-orange-100 sm:px-6 ${aboutme.length === 0 || isGenerating ? "cursor-not-allowed opacity-50" : "hover:border-orange-200"} `}
                   >
                     Generate using ai
                   </button>
                   <NextButton onClick={() => onNext()} />
                 </div>
-                <small>Cannot generate without giving prompt</small>
+                <small className="ps-8">
+                  Cannot generate without giving prompt
+                </small>
               </div>
             </div>
           </div>

@@ -42,7 +42,7 @@ export default function HomePage() {
       {isVisible ? (
         <AboutMe back={() => setIsVisible(false)} />
       ) : (
-        <div className="scroll-smooth">
+        <div className="container-screen-2xl scroll-smooth">
           <div className="relative flex min-h-[90vh] w-full flex-col items-center py-16 md:flex-row md:py-28">
             <div className="relative flex w-full flex-col gap-2 md:w-6/12">
               <div className="relative flex w-full items-center gap-1">
@@ -52,25 +52,25 @@ export default function HomePage() {
                   className="mr-2 h-36 w-60"
                 />
               </div>
-              <p className="text-6xl md:text-7xl 2xl:text-8xl">
+              <p className="text-4xl md:text-7xl 2xl:text-8xl">
                 Profile Builder
               </p>
               {/* Text Input */}
               <div>
                 <form className="w-full" onSubmit={onNext}>
-                  <div className="mt-8 flex flex-col items-center sm:flex-row md:my-8 2xl:my-10">
+                  <div className="mt-8 flex flex-row items-center md:my-8 2xl:my-10">
                     <input
                       type="text"
                       value={input}
                       required={true}
                       onChange={(e) => setInput(e.target.value)}
                       autoFocus={true}
-                      className="inline w-full rounded-full border-2 border-orange-400 bg-transparent p-2 px-4 py-3 text-lg outline-none transition-all duration-75 focus:border-orange-500 sm:w-11/12 sm:text-3xl md:w-10/12 md:text-xl lg:w-8/12 lg:text-xl 2xl:text-3xl"
+                      className="text-md inline w-full rounded-full border-2 border-orange-400 bg-transparent p-2 px-4 py-3 outline-none transition-all duration-75 focus:border-orange-500 sm:w-11/12 sm:text-3xl md:w-10/12 md:text-xl lg:w-8/12 lg:text-xl 2xl:text-3xl"
                       placeholder="Enter Your GitHub Username"
                     />
                     <button
                       type="Submit"
-                      className="mx-2 mt-5 rounded-full border-2 border-white px-1 py-3 text-lg md:mt-0"
+                      className="mx-2 rounded-full border-2 border-white px-0 py-2 text-lg sm:px-1 sm:py-3"
                     >
                       <RIGHT_ARROW_SVG className="m-0" />
                     </button>
@@ -78,7 +78,7 @@ export default function HomePage() {
                 </form>
               </div>
             </div>
-            <div className="mt-20 flex w-full justify-center md:mt-0 md:w-6/12">
+            <div className="mt-20 flex w-7/12 justify-center md:mt-0 md:w-6/12">
               <img
                 src="/hat_logo.png"
                 alt=""

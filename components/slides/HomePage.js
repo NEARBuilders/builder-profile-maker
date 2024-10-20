@@ -70,9 +70,9 @@ export default function HomePage() {
                     />
                     <button
                       type="Submit"
-                      className="mx-2 rounded-full border-2 border-white px-0 py-2 text-lg sm:px-1 sm:py-3"
+                      className="mx-2 rounded-full border-2 border-white px-0 py-2 text-lg transition-all duration-300 hover:bg-white hover:text-black hover:shadow-[0px_0px_15px_0px_rgba(0,0,0,0.3)] hover:shadow-white sm:px-1 sm:py-3"
                     >
-                      <RIGHT_ARROW_SVG className="m-0" />
+                      <RIGHT_ARROW_SVG />
                     </button>
                   </div>
                 </form>

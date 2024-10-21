@@ -94,7 +94,7 @@ ${profileMaker.data.tech
               name=""
               id=""
               value={searchStr}
-              className="duration-400 max-w-[92vw] rounded-full bg-transparent p-3 px-6 pr-16 text-orange-300 outline-none ring-2 ring-orange-200 transition-all focus:ring-orange-500 sm:max-w-full md:p-4 md:px-8"
+              className="duration-400 max-w-[92vw] rounded-full bg-transparent p-3 px-6 pr-16 outline-none ring-2 ring-orange-500 transition-all focus:ring-orange-200 sm:max-w-full md:p-4 md:px-8"
               placeholder="Search tech"
               onChange={(e) => setSearchStr(e.target.value)}
             />

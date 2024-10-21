@@ -110,15 +110,15 @@ export default function AboutMe({ back }) {
                 </div>
 
                 {/* Profile Image Upload */}
-                <div className="grid w-full place-items-center gap-4 md:grid-cols-2">
-                  <div className="flex w-full flex-col items-center gap-2">
+                <div className="grid w-full place-items-center gap-6 md:grid-cols-2">
+                  <div className="flex w-full flex-col items-center gap-3">
                     <label
                       htmlFor="profileImage"
-                      className="text-lg font-medium text-orange-500 md:text-xl"
+                      className="text-lg font-medium text-orange-500"
                     >
                       Profile Image
                     </label>
-                    <div className="h-full w-full overflow-hidden rounded-md border-2 border-orange-500 hover:border-orange-200">
+                    <div className="h-64 w-full">
                       {profileImage ? (
                         <img
                           src={profileImage.url}
@@ -126,7 +126,7 @@ export default function AboutMe({ back }) {
                           className="h-full w-full rounded-md object-cover"
                         />
                       ) : (
-                        <div className="cursor-pointer text-center">
+                        <div className="flex h-full cursor-pointer flex-col items-center justify-center text-center">
                           <UploadDropzone
                             endpoint="imageUploader"
                             onClientUploadComplete={(res) => {
@@ -134,12 +134,11 @@ export default function AboutMe({ back }) {
                               setProfileImage(res[0]);
                             }}
                             appearance={{
-                              label: {
-                                color: "#ECA227"
-                              },
-                              button: {
-                                backgroundColor: "#ECA227"
-                              }
+                              label:
+                                "text-sm w-full text-orange-500 hover:text-orange-500",
+                              button: "bg-orange-500 w-28",
+                              container:
+                                "overflow-hidden transition-all ease-in-out duration-300 w-full rounded-md border-2 border-orange-500 hover:border-orange-200"
                             }}
                           />
                         </div>
@@ -148,14 +147,14 @@ export default function AboutMe({ back }) {
                   </div>
 
                   {/* Background Image Upload */}
-                  <div className="flex w-full flex-col items-center gap-2">
+                  <div className="flex w-full flex-col items-center gap-3">
                     <label
                       htmlFor="backgroundImage"
-                      className="text-lg font-medium text-orange-500 md:text-xl"
+                      className="text-lg font-medium text-orange-500"
                     >
                       Background Image
                     </label>
-                    <div className="h-full w-full overflow-hidden rounded-md border-2 border-orange-500 hover:border-orange-200">
+                    <div className="h-64 w-full">
                       {backgroundImage ? (
                         <img
                           src={backgroundImage.url}
@@ -163,7 +162,7 @@ export default function AboutMe({ back }) {
                           className="h-full w-full rounded-md object-cover"
                         />
                       ) : (
-                        <div className="cursor-pointer text-center">
+                        <div className="flex h-full cursor-pointer flex-col items-center justify-center text-center">
                           <UploadDropzone
                             endpoint="imageUploader"
                             onClientUploadComplete={(res) => {
@@ -171,12 +170,11 @@ export default function AboutMe({ back }) {
                               setBackgroundImage(res[0]);
                             }}
                             appearance={{
-                              label: {
-                                color: "#ECA227"
-                              },
-                              button: {
-                                backgroundColor: "#ECA227"
-                              }
+                              label:
+                                "text-sm w-full text-orange-500 hover:text-orange-500",
+                              button: "bg-orange-500  w-28",
+                              container:
+                                "overflow-hidden transition-all ease-in-out w-full duration-300 rounded-md border-2 border-orange-500 hover:border-orange-200"
                             }}
                           />
                         </div>
@@ -184,6 +182,7 @@ export default function AboutMe({ back }) {
                     </div>
                   </div>
                 </div>
+
                 <div className="space-y-2">
                   <label
                     htmlFor="aboutMe"

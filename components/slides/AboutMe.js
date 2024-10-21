@@ -102,7 +102,7 @@ export default function AboutMe({ back }) {
                   <input
                     id="name"
                     type="text"
-                    className="w-full rounded-md border-2 border-orange-500 bg-transparent p-2 outline-none focus:border-white"
+                    className="w-full rounded-md border-2 border-orange-500 bg-transparent p-2 outline-none focus:border-orange-200"
                     placeholder="Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -193,7 +193,7 @@ export default function AboutMe({ back }) {
                   </label>
                   <textarea
                     id="aboutMe"
-                    className="h-48 w-full resize-none rounded-md border-2 border-orange-500 bg-transparent p-2 outline-none focus:border-white disabled:cursor-not-allowed disabled:opacity-50"
+                    className="h-48 w-full resize-none rounded-md border-2 border-orange-500 bg-transparent p-2 outline-none focus:border-orange-200 disabled:cursor-not-allowed disabled:opacity-50"
                     placeholder={textareaPlaceholder}
                     value={aboutme}
                     onChange={(e) => setAboutme(e.target.value)}

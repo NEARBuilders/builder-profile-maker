@@ -5,7 +5,7 @@ export default function TextInputWithIcon({
   id,
   children,
   placeholder,
-  viewBox = "-0.5 0 20 16"
+  viewBox = "-0.5 0 24 21"
 }) {
   const profileMaker = useProfileMaker();
   const [input, setInput] = useState(profileMaker.data.socials[id]);
@@ -20,7 +20,7 @@ export default function TextInputWithIcon({
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder={placeholder}
-        className="h-16 w-full border-b-2 border-orange-300 bg-transparent p-4 outline-none focus:z-10 focus:border-orange-200"
+        className="h-16 w-full border-b-2 border-orange-500 bg-transparent p-4 outline-none focus:z-10 focus:border-orange-200"
       />
 
       <label htmlFor={id} className="p-5">
@@ -32,7 +32,7 @@ export default function TextInputWithIcon({
           viewBox={viewBox}
           stroke="currentColor"
           aria-hidden="true"
-          className="h-8 w-8 text-orange-300 opacity-75"
+          className="h-8 w-8 text-orange-500 opacity-75"
         >
           {children}
         </svg>

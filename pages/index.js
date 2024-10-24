@@ -41,9 +41,9 @@ export default function Home() {
       </Head>
       <>
         <CrispBanner />
-        <div className="flex min-h-screen max-w-[100vw] flex-col overflow-x-hidden p-3 text-white md:p-4">
+        <div className="flex min-h-screen max-w-[100vw] flex-col items-center overflow-x-hidden p-3 text-white md:p-4">
           {/* <NavBar /> */}
-          <div className="flex-grow">
+          <div className="max-w-screen-2xl flex-grow">
             <HomePage />
           </div>
           <Footer />

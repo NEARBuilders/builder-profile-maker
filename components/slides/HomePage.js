@@ -43,7 +43,7 @@ export default function HomePage() {
         <AboutMe back={() => setIsVisible(false)} />
       ) : (
         <div className="scroll-smooth">
-          <div className="relative flex min-h-[90vh] w-full flex-col items-center py-16 md:flex-row md:py-28">
+          <div className="relative flex w-full flex-col items-center py-16 md:min-h-[90vh] md:flex-row md:py-28">
             <div className="relative flex w-full flex-col gap-2 md:w-6/12">
               <div className="relative flex w-full items-center gap-1">
                 <img
@@ -52,28 +52,33 @@ export default function HomePage() {
                   className="mr-2 h-36 w-60"
                 />
               </div>
-              <p className="text-6xl md:text-7xl 2xl:text-8xl">
+              <p className="text-4xl sm:text-6xl md:text-7xl 2xl:text-8xl">
                 Profile Builder
               </p>
               {/* Text Input */}
-              <div className="2xl:my10 mt-8 flex flex-col items-center sm:flex-row md:my-8">
+              <div>
                 <form className="w-full" onSubmit={onNext}>
-                  <input
-                    type="text"
-                    value={input}
-                    required={true}
-                    onChange={(e) => setInput(e.target.value)}
-                    autoFocus={true}
-                    className="focus:border-border-[#ECA227] inline w-full border-b-2 border-[#ECA227] bg-transparent text-xl outline-none focus:border-b-4 sm:w-11/12 sm:text-3xl md:w-10/12 md:text-xl lg:w-8/12 lg:text-2xl 2xl:text-3xl"
-                    placeholder="Enter Your GitHub Username"
-                  />
-                  <button type="Submit">
-                    <RIGHT_ARROW_SVG />
-                  </button>
+                  <div className="mt-8 flex flex-row items-center md:my-8 2xl:my-10">
+                    <input
+                      type="text"
+                      value={input}
+                      required={true}
+                      onChange={(e) => setInput(e.target.value)}
+                      autoFocus={true}
+                      className="text-md inline w-full rounded-full border-2 border-orange-400 bg-transparent p-2 px-4 py-3 outline-none transition-all duration-75 focus:border-orange-500 sm:w-11/12 sm:text-3xl md:w-10/12 md:text-xl lg:w-8/12 lg:text-xl 2xl:text-3xl"
+                      placeholder="Enter Your GitHub Username"
+                    />
+                    <button
+                      type="Submit"
+                      className="mx-2 rounded-full border-2 border-white px-0 py-2 text-lg transition-all duration-300 hover:bg-white hover:text-black hover:shadow-[0px_0px_15px_0px_rgba(0,0,0,0.3)] hover:shadow-white sm:px-1 sm:py-3"
+                    >
+                      <RIGHT_ARROW_SVG />
+                    </button>
+                  </div>
                 </form>
               </div>
             </div>
-            <div className="mt-16 flex w-full justify-center md:mt-0 md:w-6/12">
+            <div className="mt-20 flex w-7/12 justify-center md:mt-0 md:w-6/12">
               <img
                 src="/hat_logo.png"
                 alt=""

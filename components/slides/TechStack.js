@@ -101,7 +101,7 @@ ${profileMaker.data.tech
             <SearchIcon className="absolute right-4 top-1/2 w-8 -translate-y-1/2" />
           </div>
           {/* Select Badge Type (with preview) */}
-          <div className="my-6 flex flex-row flex-wrap items-center justify-center rounded-md border border-orange-300/50 p-2 px-4">
+          {/* <div className="my-6 flex flex-row flex-wrap items-center justify-center rounded-md border border-orange-300/50 p-2 px-4">
             Theme:
             <select
               id="badgestyle"
@@ -133,7 +133,7 @@ ${profileMaker.data.tech
               alt=""
               className="ml-4 w-max max-w-xs"
             />
-          </div>
+          </div> */}
           <div className="flex w-full flex-col md:flex-row">
             <div
               className={`w-full ${

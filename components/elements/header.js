@@ -6,7 +6,6 @@ export default function Header({ back, children }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Trigger when the user scrolls past 150px (adjust this value as needed)
       if (window.scrollY > 150) {
         setIsSticky(true);
       } else {

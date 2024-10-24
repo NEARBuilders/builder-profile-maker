@@ -9,6 +9,10 @@ import GitHubStats from "./GitHubCards";
 import { UploadDropzone } from "../../utils/uploadthing";
 import Header from "../elements/header";
 import { BULB_SVG } from "../elements/SVG";
+import { IoCropOutline } from "react-icons/io5";
+import { FaX } from "react-icons/fa6";
+import { BiX } from "react-icons/bi";
+import { XIcon } from "@heroicons/react/outline";
 
 export default function AboutMe({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -120,11 +124,21 @@ export default function AboutMe({ back }) {
                     </label>
                     <div className="h-64 w-full">
                       {profileImage ? (
-                        <img
-                          src={profileImage.url}
-                          alt="Profile"
-                          className="h-full w-full rounded-md object-cover"
-                        />
+                        <>
+                          <div className="flex justify-end">
+                            <XIcon
+                              onClick={() => {
+                                setProfileImage(null);
+                              }}
+                              className="absolute m-1 h-6 w-6 cursor-pointer text-right text-red-500 drop-shadow-xl hover:scale-125 sm:h-4 sm:w-4"
+                            />
+                          </div>
+                          <img
+                            src={profileImage.url}
+                            alt="Profile"
+                            className="h-full w-full rounded-md object-cover"
+                          />
+                        </>
                       ) : (
                         <div className="flex h-full cursor-pointer flex-col items-center justify-center text-center">
                           <UploadDropzone
@@ -156,11 +170,21 @@ export default function AboutMe({ back }) {
                     </label>
                     <div className="h-64 w-full">
                       {backgroundImage ? (
-                        <img
-                          src={backgroundImage.url}
-                          alt="Background"
-                          className="h-full w-full rounded-md object-cover"
-                        />
+                        <>
+                          <div className="flex justify-end">
+                            <XIcon
+                              onClick={() => {
+                                setBackgroundImage(null);
+                              }}
+                              className="absolute m-1 h-6 w-6 cursor-pointer text-right text-red-500 drop-shadow-xl hover:scale-125 sm:h-4 sm:w-4"
+                            />
+                          </div>
+                          <img
+                            src={backgroundImage.url}
+                            alt="Background"
+                            className="h-full w-full rounded-md object-cover"
+                          />
+                        </>
                       ) : (
                         <div className="flex h-full cursor-pointer flex-col items-center justify-center text-center">
                           <UploadDropzone

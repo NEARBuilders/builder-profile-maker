@@ -1,21 +1,28 @@
 import React, { useState } from "react";
 import { useProfileMaker } from "../../../contexts/profile-maker";
 
+function toTitleCase(str) {
+  return str
+    .match(/[a-zA-Z0-9]+/g)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
+}
+
 export default function BadgeSelect({ label, url }) {
   const profileMaker = useProfileMaker();
   const [isAdded, setIsAdded] = useState(
-    profileMaker.data.tech.toString().includes(url)
+    profileMaker.data.tech.toString().includes(label)
   );
   function onClickFun() {
     if (isAdded) {
       setIsAdded(false);
       //   for()
-      var badgeIndex = profileMaker.data.tech.indexOf(url);
+      var badgeIndex = profileMaker.data.tech.indexOf(label);
       profileMaker.data.tech.splice(badgeIndex, 1);
       //   console.log(data);
     } else {
       setIsAdded(true);
-      profileMaker.data.tech.push(url);
+      profileMaker.data.tech.push(toTitleCase(label));
       //   console.log(data);
     }
   }

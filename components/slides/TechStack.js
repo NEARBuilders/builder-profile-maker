@@ -65,9 +65,7 @@ ${socials}
         finaldata +
         `
 # 💻 Tech Stack:
-${profileMaker.data.tech
-  .join(" ")
-  .replaceAll(badgeStyle, profileMaker.data.badge_theme)}
+- ${profileMaker.data.tech.join(" \n- ")}
 `;
     }
     finaldata = finaldata + githubstats;

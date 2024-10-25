@@ -12,30 +12,28 @@ export default function Socials({ back }) {
     if (document.getElementById("linkedin").value != "") {
       socials =
         socials +
-        `[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/${
+        `- [LinkedIn](https://linkedin.com/in/${
           document.getElementById("linkedin").value
-        }) `;
+        })\n`;
     }
     if (document.getElementById("telegram").value != "") {
       socials =
         socials +
-        `[![Telegram](https://img.shields.io/badge/Telegram-%239146FF.svg?logo=Telegram&logoColor=white)](https://t.me/${
+        `- [Telegram](https://t.me/${
           document.getElementById("telegram").value
-        }) `;
+        })\n`;
     }
     if (document.getElementById("x").value != "") {
       socials =
         socials +
-        `[![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/${
-          document.getElementById("x").value
-        }) `;
+        `- [X](https://x.com/${document.getElementById("x").value})\n`;
     }
     if (document.getElementById("website").value != "") {
       socials =
         socials +
-        `[![Website](https://img.shields.io/badge/Website-%239146FF.svg?logo=Website&logoColor=white)](https://tele.tv/${
+        `- [Website](https://tele.tv/${
           document.getElementById("website").value
-        }) `;
+        })\n`;
     }
     setIsVisible(true);
   }

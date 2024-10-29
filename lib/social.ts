@@ -12,7 +12,7 @@ export type Profile = {
     url: string;
     ipfs_cid: string;
   };
-  linktree: Record<string, string>
+  linktree: Record<string, string>;
 };
 
 export const SOCIAL_CONTRACT = {
@@ -23,7 +23,7 @@ export const SOCIAL_CONTRACT = {
 export const APP = {
   mainnet: "builddao.near",
   testnet: "builddao.testnet"
-}
+};
 
 const social = new Social({
   contractId: SOCIAL_CONTRACT[NETWORK_ID],
@@ -44,32 +44,33 @@ export async function getProfile(username: string): Promise<Profile | null> {
   return profile;
 }
 
-export async function setProfile(wallet: Wallet, accountId: string, profileData: Profile, appData: any) {
+export async function setProfile(
+  wallet: Wallet,
+  accountId: string,
+  profileData: Profile,
+  appData: any
+) {
   const account = await wallet.getAccount();
   const transaction = await social.set({
     account: {
       publicKey: account.publicKey,
-      accountID: account.accountId,
+      accountID: account.accountId
     },
     data: {
       [accountId]: {
-        profile: {
-
-        },
+        profile: profileData,
         settings: {
-          [APP[NETWORK_ID]]: {
-            
-          }
+          [APP[NETWORK_ID]]: {}
         }
       }
     }
   });
-  
+
   // @ts-expect-error - whatever
   const transformedActions = transformActions(transaction.actions);
 
   await wallet.signAndSendTransaction({
     contractId: SOCIAL_CONTRACT[NETWORK_ID],
-    actions: transformedActions,
+    actions: transformedActions
   });
 }

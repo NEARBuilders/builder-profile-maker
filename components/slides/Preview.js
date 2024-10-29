@@ -44,7 +44,7 @@ export default function Preview({ back }) {
 
     const tags = {};
     data.tech.forEach((tech) => {
-      tags[tech.toLowerCase()] = tech;
+      tags[tech.toLowerCase().replace(" ", "_")] = tech;
     });
 
     let profileData = {
@@ -59,13 +59,14 @@ export default function Preview({ back }) {
       tags,
       linktree: {
         github: data.username,
-        telegram: data.telegram,
+        telegram: data.socials.telegram,
         linkedin: data.socials.linkedin,
         twitter: data.socials.x,
         website: data.socials.website
       }
     };
 
+    console.log(profileData);
     setProfile(wallet, signedAccountId, profileData);
 
     return profileData;

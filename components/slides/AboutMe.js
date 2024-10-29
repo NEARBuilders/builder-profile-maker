@@ -115,7 +115,7 @@ export default function AboutMe({ back }) {
 
                 {/* Profile Image Upload */}
                 <div className="grid w-full place-items-center gap-6 md:grid-cols-2">
-                  <div className="flex w-full flex-col items-center gap-3">
+                  <div className="col-span-1 flex w-full flex-col items-center gap-3">
                     <label
                       htmlFor="profileImage"
                       className="text-lg font-medium text-orange-500"
@@ -161,7 +161,7 @@ export default function AboutMe({ back }) {
                   </div>
 
                   {/* Background Image Upload */}
-                  <div className="flex w-full flex-col items-center gap-3">
+                  <div className="col-span-1 flex w-full flex-col items-center gap-3">
                     <label
                       htmlFor="backgroundImage"
                       className="text-lg font-medium text-orange-500"

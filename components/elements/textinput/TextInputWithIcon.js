@@ -11,7 +11,7 @@ export default function TextInputWithIcon({
   const [input, setInput] = useState(profileMaker.data.socials[id]);
   useEffect(() => {
     profileMaker.data.socials[id] = input;
-  }, [input]);
+  }, [input, id, profileMaker.data.socials]);
   return (
     <div className="my-2 flex w-full md:w-5/12">
       <input

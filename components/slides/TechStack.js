@@ -48,7 +48,7 @@ export default function TechStack({ back }) {
       finaldata =
         finaldata +
         `# 💫 About Me:
-${profileMaker.data.aboutme.replace(/(?:\r\n|\r|\n)/g, "<br>")}
+${profileMaker.data.aboutme.replace(/(?:\r\n|\r|\n)/g, "\n")}
 
 `;
     }

@@ -15,7 +15,17 @@ export default async function handler(req, res) {
         messages: [
           {
             role: "system",
-            content: `You are a intelligent assistant which only responds a 'Profile About Me' section from given user prompt. Do not send the response in markdown. Only send the actual content and DO NOT ADD 'Profile About Me: ' before it.`
+            content: `You are a intelligent assistant which only responds a 'Profile About Me' section from given user prompt. Do not send the response in markdown. Only send the actual content and DO NOT ADD 'Profile About Me: ' before it.
+            If there are emojis in the prompt, please keep them in the response, or add them if they improve the content.
+            If the response comes in following format:
+            "🔭 I'm currently working on 
+            👯 I'm looking to collaborate on
+            🤝 I'm looking for help with
+            🌱 I'm currently learning
+            💬 Ask me about
+            ⚡ Fun fact"
+            then enhance it.
+            `
           },
           {
             role: "user",

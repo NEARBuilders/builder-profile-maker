@@ -158,7 +158,7 @@ export const BULB_SVG = ({ size }) => {
       viewBox="0 0 24 24"
       stroke="currentColor"
       aria-hidden="true"
-      class="w-6 stroke-1"
+      className="w-6 stroke-1"
     >
       <path
         strokeLinecap="round"

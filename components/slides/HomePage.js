@@ -20,7 +20,7 @@ const LogOut = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      class="lucide lucide-log-out size-[14px] md:size-[16px]"
+      className="lucide lucide-log-out size-[14px] md:size-[16px]"
     >
       <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
       <polyline points="16 17 21 12 16 7" />
@@ -41,7 +41,7 @@ const LogIn = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      class="lucide lucide-log-in size-[14px] md:size-[16px]"
+      className="lucide lucide-log-in size-[14px] md:size-[16px]"
     >
       <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
       <polyline points="10 17 15 12 10 7" />

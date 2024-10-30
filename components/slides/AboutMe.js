@@ -263,7 +263,7 @@ export default function AboutMe({ back }) {
                 </div>
                 <div className="flex items-center gap-2">
                   <button
-                    class="opacity-60 hover:opacity-80"
+                    className="opacity-60 hover:opacity-80"
                     title="Load Template"
                     onClick={() => setAboutme(textareaPlaceholder)}
                   >

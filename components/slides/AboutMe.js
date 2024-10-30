@@ -64,10 +64,6 @@ export default function AboutMe({ back }) {
     setIsVisible(true);
   }
 
-  React.useEffect(() => {
-    console.log("profileMaker", profileMaker.data);
-  }, [profileMaker.data]);
-
   return useObserver(() => (
     <>
       {isVisible ? (

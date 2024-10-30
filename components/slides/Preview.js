@@ -4,6 +4,7 @@ import { useWallet } from "../../contexts/wallet";
 import { setProfile } from "../../lib/social";
 import ButtonWithSVG from "../elements/buttons/ButtonWithSVG";
 import Header from "../elements/header";
+import { toast } from "react-toastify";
 
 export default function Preview({ back }) {
   const profileMaker = useProfileMaker();
@@ -39,51 +40,57 @@ export default function Preview({ back }) {
   }, [md, profileMaker.data.finalData]);
 
   function saveToNearSocial() {
-    const data = profileMaker.data;
+    try {
+      const data = profileMaker.data;
 
-    const tags = {};
-    data.tech.forEach((tech) => {
-      tags[tech.toLowerCase().replace(" ", "_")] = tech;
-    });
+      const tags = {};
+      data.tech.forEach((tech) => {
+        tags[tech.toLowerCase().replace(" ", "_")] = tech;
+      });
 
-    let website = data.socials.website;
-    if (!website.startsWith("http") || !website.startsWith("https")) {
-      website = `https://${website}`;
-    }
-
-    let profileData = {
-      name: data.name,
-      description: data.finalData,
-      image: {
-        ipfs_cid: "",
-        url: data.profileImage,
-        nft: {
-          contractId: "",
-          tokenId: ""
-        }
-      },
-      backgroundImage: {
-        ipfs_cid: "",
-        url: data.backgroundImage,
-        nft: {
-          contractId: "",
-          tokenId: ""
-        }
-      },
-      tags,
-      linktree: {
-        github: data.username,
-        telegram: data.socials.telegram,
-        linkedin: data.socials.linkedin,
-        twitter: data.socials.x,
-        website: website
+      let website = data.socials.website;
+      if (
+        website &&
+        (!website.startsWith("http") || !website.startsWith("https"))
+      ) {
+        website = `https://${website}`;
       }
-    };
 
-    console.log(profileData);
-    setProfile(wallet, signedAccountId, profileData);
+      let profileData = {
+        name: data.name,
+        description: data.finalData,
+        image: {
+          ipfs_cid: "",
+          url: data.profileImage,
+          nft: {
+            contractId: "",
+            tokenId: ""
+          }
+        },
+        backgroundImage: {
+          ipfs_cid: "",
+          url: data.backgroundImage,
+          nft: {
+            contractId: "",
+            tokenId: ""
+          }
+        },
+        tags,
+        linktree: {
+          github: data.username,
+          telegram: data.socials.telegram,
+          linkedin: data.socials.linkedin,
+          twitter: data.socials.x,
+          website: website
+        }
+      };
 
-    return profileData;
+      setProfile(wallet, signedAccountId, profileData);
+
+      return profileData;
+    } catch (error) {
+      toast.error("Something went wrong while saving to NEAR Social");
+    }
   }
 
   return (

@@ -80,8 +80,6 @@ export default function HomePage() {
     }
   }
 
-  console.log(wallet);
-
   // useEffect(() => {
   //   if (!initialSignIn && signedAccountId) {
   //     window.location.reload();

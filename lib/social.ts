@@ -1,5 +1,6 @@
 import { Social, transformActions } from "@builddao/near-social-js";
 import { NETWORK_ID, Wallet } from "./near";
+import { toast } from "react-toastify";
 
 export type Profile = {
   name: string;
@@ -50,27 +51,34 @@ export async function setProfile(
   profileData: Profile,
   appData: any
 ) {
-  const account = await wallet.getAccount();
-  const transaction = await social.set({
-    account: {
-      publicKey: account.publicKey,
-      accountID: account.accountId
-    },
-    data: {
-      [accountId]: {
-        profile: profileData,
-        settings: {
-          [APP[NETWORK_ID]]: {}
+  try {
+    toast("Saving your profile...");
+    const account = await wallet.getAccount();
+    const transaction = await social.set({
+      account: {
+        publicKey: account.publicKey,
+        accountID: account.accountId
+      },
+      data: {
+        [accountId]: {
+          profile: profileData,
+          settings: {
+            [APP[NETWORK_ID]]: {}
+          }
         }
       }
-    }
-  });
+    });
 
-  // @ts-expect-error - whatever
-  const transformedActions = transformActions(transaction.actions);
+    // @ts-expect-error - whatever
+    const transformedActions = transformActions(transaction.actions);
 
-  await wallet.signAndSendTransaction({
-    contractId: SOCIAL_CONTRACT[NETWORK_ID],
-    actions: transformedActions
-  });
+    await wallet.signAndSendTransaction({
+      contractId: SOCIAL_CONTRACT[NETWORK_ID],
+      actions: transformedActions
+    });
+    toast.success("Your profile is saved successfully!");
+  } catch (error) {
+    console.log(error);
+    toast.error("Something went wrong!");
+  }
 }

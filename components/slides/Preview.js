@@ -40,21 +40,35 @@ export default function Preview({ back }) {
 
   function saveToNearSocial() {
     const data = profileMaker.data;
-    console.log(data);
 
     const tags = {};
     data.tech.forEach((tech) => {
       tags[tech.toLowerCase().replace(" ", "_")] = tech;
     });
 
+    let website = data.socials.website;
+    if (!website.startsWith("http") || !website.startsWith("https")) {
+      website = `https://${website}`;
+    }
+
     let profileData = {
       name: data.name,
-      description: data.aboutme,
+      description: data.finalData,
       image: {
-        url: data.profileImage
+        ipfs_cid: "",
+        url: data.profileImage,
+        nft: {
+          contractId: "",
+          tokenId: ""
+        }
       },
       backgroundImage: {
-        url: data.backgroundImage
+        ipfs_cid: "",
+        url: data.backgroundImage,
+        nft: {
+          contractId: "",
+          tokenId: ""
+        }
       },
       tags,
       linktree: {
@@ -62,7 +76,7 @@ export default function Preview({ back }) {
         telegram: data.socials.telegram,
         linkedin: data.socials.linkedin,
         twitter: data.socials.x,
-        website: data.socials.website
+        website: website
       }
     };
 

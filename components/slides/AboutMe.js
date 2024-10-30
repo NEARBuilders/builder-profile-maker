@@ -9,10 +9,8 @@ import GitHubStats from "./GitHubCards";
 import { UploadDropzone } from "../../utils/uploadthing";
 import Header from "../elements/header";
 import { BULB_SVG } from "../elements/SVG";
-import { IoCropOutline } from "react-icons/io5";
-import { FaX } from "react-icons/fa6";
-import { BiX } from "react-icons/bi";
 import { XIcon } from "@heroicons/react/outline";
+import { toast } from "react-toastify";
 
 export default function AboutMe({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -53,9 +51,9 @@ export default function AboutMe({ back }) {
 
   function onNext() {
     if (
-      aboutme != `` &&
-      name != `` &&
-      profileImage != `` &&
+      aboutme != `` ||
+      name != `` ||
+      profileImage != `` ||
       backgroundImage != ``
     ) {
       profileMaker.data.aboutme = aboutme;
@@ -65,6 +63,10 @@ export default function AboutMe({ back }) {
     }
     setIsVisible(true);
   }
+
+  React.useEffect(() => {
+    console.log("profileMaker", profileMaker.data);
+  }, [profileMaker.data]);
 
   return useObserver(() => (
     <>
@@ -129,6 +131,16 @@ export default function AboutMe({ back }) {
                             <XIcon
                               onClick={() => {
                                 setProfileImage(null);
+                                toast.error("Profile Image Removed", {
+                                  position: "top-right",
+                                  autoClose: 5000,
+                                  hideProgressBar: false,
+                                  closeOnClick: true,
+                                  pauseOnHover: true,
+                                  draggable: true,
+                                  progress: undefined,
+                                  theme: "dark"
+                                });
                               }}
                               className="absolute m-1 h-6 w-6 cursor-pointer text-right text-red-500 drop-shadow-xl hover:scale-125 sm:h-4 sm:w-4"
                             />
@@ -146,6 +158,16 @@ export default function AboutMe({ back }) {
                             onClientUploadComplete={(res) => {
                               console.log("File: ", res);
                               setProfileImage(res[0]);
+                              toast.success("Profile Image Uploaded", {
+                                position: "top-right",
+                                autoClose: 5000,
+                                hideProgressBar: false,
+                                closeOnClick: true,
+                                pauseOnHover: true,
+                                draggable: true,
+                                progress: undefined,
+                                theme: "dark"
+                              });
                             }}
                             appearance={{
                               label:
@@ -175,6 +197,16 @@ export default function AboutMe({ back }) {
                             <XIcon
                               onClick={() => {
                                 setBackgroundImage(null);
+                                toast.error("Background Image Removed", {
+                                  position: "top-right",
+                                  autoClose: 5000,
+                                  hideProgressBar: false,
+                                  closeOnClick: true,
+                                  pauseOnHover: true,
+                                  draggable: true,
+                                  progress: undefined,
+                                  theme: "dark"
+                                });
                               }}
                               className="absolute m-1 h-6 w-6 cursor-pointer text-right text-red-500 drop-shadow-xl hover:scale-125 sm:h-4 sm:w-4"
                             />
@@ -192,6 +224,16 @@ export default function AboutMe({ back }) {
                             onClientUploadComplete={(res) => {
                               console.log("Files: ", res);
                               setBackgroundImage(res[0]);
+                              toast.success("Background Image Uploaded", {
+                                position: "top-right",
+                                autoClose: 5000,
+                                hideProgressBar: false,
+                                closeOnClick: true,
+                                pauseOnHover: true,
+                                draggable: true,
+                                progress: undefined,
+                                theme: "dark"
+                              });
                             }}
                             appearance={{
                               label:

@@ -20,5 +20,6 @@ export const useProfileMaker = () => {
       "useProfileMaker must be used within a ProfileMakerProvider"
     );
   }
+
   return context;
 };

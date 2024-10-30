@@ -21,7 +21,7 @@ export default function GitHubStats({ back }) {
   );
   function onNext() {
     githubstats = `# 📊 GitHub Stats:
-![](${document.getElementById("stats").getAttribute("src")})<br/>
+![](${document.getElementById("stats").getAttribute("src")})
 `;
     setIsVisible(true);
   }

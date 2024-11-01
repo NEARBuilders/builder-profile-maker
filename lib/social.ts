@@ -75,7 +75,7 @@ export async function setProfile(
         publicKey: account.publicKey,
         accountID: account.accountId
       },
-      deposit: "1000000000000000000000"
+      deposit: "10000000000000000000000"
     });
 
     // @ts-expect-error - whatever

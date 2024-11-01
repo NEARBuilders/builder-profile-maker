@@ -54,6 +54,7 @@ export async function setProfile(
   try {
     toast("Saving your profile...");
     const account = await wallet.getAccount();
+
     const transaction = await social.set({
       account: {
         publicKey: account.publicKey,
@@ -69,13 +70,28 @@ export async function setProfile(
       }
     });
 
+    const storageDeposit = await social.storageDeposit({
+      account: {
+        publicKey: account.publicKey,
+        accountID: account.accountId
+      },
+      deposit: "1000000000000000000000"
+    });
+
     // @ts-expect-error - whatever
     const transformedActions = transformActions(transaction.actions);
+    // @ts-expect-error - whatever
+    const transformedActionsStorage = transformActions(storageDeposit.actions);
 
     await wallet.signAndSendTransaction({
       contractId: SOCIAL_CONTRACT[NETWORK_ID],
-      actions: transformedActions
+      actions: [...transformedActionsStorage, ...transformedActions]
     });
+
+    // await wallet.signAndSendTransaction({
+    //   contractId: SOCIAL_CONTRACT[NETWORK_ID],
+    //   actions: transformedActions
+    // });
     toast.success("Your profile is saved successfully!");
   } catch (error) {
     console.log(error);

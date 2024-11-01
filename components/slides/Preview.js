@@ -137,6 +137,9 @@ export default function Preview({ back }) {
           }
         />
       </div>
+      <div>
+        <small>You need atleast 0.01 NEAR to save your profile</small>
+      </div>
       <div className="flex">
         <p className="rounded-t-md bg-orange-200 p-1 px-4 text-zinc-800 brightness-75">
           PREVIEW

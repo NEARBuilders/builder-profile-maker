@@ -2,8 +2,24 @@ import Head from "next/head";
 import { CrispBanner } from "../components/crisp";
 import Footer from "../components/elements/Footer";
 import HomePage from "../components/slides/HomePage";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
+import { useEffect } from "react";
 
 export default function Home() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  useEffect(() => {
+    const transactionHashes = searchParams.get("transactionHashes");
+
+    if (transactionHashes) {
+      toast.success("Your profile is saved successfully!");
+      router.push("/");
+    }
+  }, [searchParams, router]);
+
   return (
     <>
       <Head>

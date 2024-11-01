@@ -5,10 +5,13 @@ import { setProfile } from "../../lib/social";
 import ButtonWithSVG from "../elements/buttons/ButtonWithSVG";
 import Header from "../elements/header";
 import { toast } from "react-toastify";
+import { useState } from "react";
+import Link from "next/link";
 
 export default function Preview({ back }) {
   const profileMaker = useProfileMaker();
-  const { signIn, signOut, wallet, signedAccountId } = useWallet();
+  const { signIn, wallet, signedAccountId } = useWallet();
+  const [saved, setSaved] = useState(false);
 
   var md = require("markdown-it")({
     html: true,
@@ -40,6 +43,7 @@ export default function Preview({ back }) {
   }, [md, profileMaker.data.finalData]);
 
   function saveToNearSocial() {
+    setSaved(false);
     try {
       const data = profileMaker.data;
 
@@ -86,10 +90,11 @@ export default function Preview({ back }) {
       };
 
       setProfile(wallet, signedAccountId, profileData);
-
+      setSaved(true);
       return profileData;
     } catch (error) {
       toast.error("Something went wrong while saving to NEAR Social");
+      setSaved(false);
     }
   }
 
@@ -138,7 +143,17 @@ export default function Preview({ back }) {
         />
       </div>
       <div>
-        <small>You need atleast 0.2 NEAR to save your profile</small>
+        {saved ? (
+          <Link
+            href={`https://${signedAccountId}.social`}
+            target="_blank"
+            className="text-orange-300 underline"
+          >
+            View your Social Profile!
+          </Link>
+        ) : (
+          <small>You need atleast 0.02 NEAR to save your profile</small>
+        )}
       </div>
       <div className="flex">
         <p className="rounded-t-md bg-orange-200 p-1 px-4 text-zinc-800 brightness-75">

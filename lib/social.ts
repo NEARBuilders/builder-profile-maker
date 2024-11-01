@@ -1,6 +1,7 @@
 import { Social, transformActions } from "@builddao/near-social-js";
 import { NETWORK_ID, Wallet } from "./near";
 import { toast } from "react-toastify";
+import { utils } from "near-api-js";
 
 export type Profile = {
   name: string;
@@ -70,12 +71,15 @@ export async function setProfile(
       }
     });
 
+    const price_per_byte = 0.00001;
+    const min_amount = 2000;
+
     const storageDeposit = await social.storageDeposit({
       account: {
         publicKey: account.publicKey,
         accountID: account.accountId
       },
-      deposit: "10000000000000000000000"
+      deposit: utils.format.parseNearAmount(min_amount.toString())
     });
 
     // @ts-expect-error - whatever

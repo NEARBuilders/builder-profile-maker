@@ -72,7 +72,7 @@ export async function setProfile(
     });
 
     const price_per_byte = 0.00001;
-    const min_amount = 2000;
+    const min_amount = 2000 * price_per_byte;
 
     const storageDeposit = await social.storageDeposit({
       account: {
